@@ -26,7 +26,7 @@ Le Gestionnaire de Tournoi d'Échecs est un logiciel Python permettant de gérer
 2. Ouvrez l'invite de commande (ou terminal).
 3. Créez un dossier pour l'application avec la commande : `mkdir GestionnaireTournoiEchecs`.
 4. Accédez au dossier nouvellement créé : `cd GestionnaireTournoiEchecs`.
-5. Créez un environnement virtuel avec la commande (Windows) : `python -m venv .env` ou (Mac/Linux) : `python3 -m venv .env`.
+5. Créez un environnement virtuel avec la commande (Windows) : `python -m env .env` ou (Mac/Linux) : `python3 -m env .env`.
 6. Activez l'environnement virtuel (Windows) : `.env\Scripts\activate` ou (Mac/Linux) : `source .env/bin/activate`.
 7. Installez les dépendances requises avec la commande : `pip install -r requirements.txt`.
 8. Ajoutez les fichiers du Gestionnaire de Tournoi d'Échecs dans le dossier.
@@ -39,10 +39,10 @@ git clone https://github.com/MarcOutt/OC_p4.git
 ```
 
 2. Mettez en place un environnement virtuel :
-   * Créez l'environnement virtuel: `python -m venv venv`
+   * Créez l'environnement virtuel: `python -m venv env`
    * Activez l'environnement virtuel :
-       * Windows : `venv\Scripts\activate.bat`
-       * Unix/MacOS : `source venv/bin/activate`
+       * Windows : `env\Scripts\activate.bat`
+       * Unix/MacOS : `source env/bin/activate`
 
 3. Installez les dépendances du projet :
 
