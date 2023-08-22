@@ -18,8 +18,8 @@ class PlayerController():
         """Create a new player."""
         first_name = Input.for_string("Please enter player's first name: ").capitalize()
         last_name = Input.for_string("Please enter player's last name: ").capitalize()
-        birthday_string = Input.birthday("Please enter player's birth date (format = DD/MM/YYYY): ")
-        identifier = Input.for_identifier("Please enter player's indentifier(format =ww00000" )
+        birthday_string = Input.birthday("Please enter player's birth date (format DD/MM/YYYY): ")
+        identifier = Input.for_identifier("Please enter player's indentifier (ex: AB12345): ")
 
         print("\n A player has been created.\n")
 
