@@ -39,6 +39,20 @@ class TournamentController():
         )
         self.manager.add_tournament(tournament)
 
+    def load_tournament(self):
+        # Shoudl be in view
+        print("Tournaments available:")
+        for tournament in self.manager.tournaments:
+            print(tournament)
+        name = self.view.input_tournament()
+        tournament = self.manager.get_by_name(name)
+        if not tournament:
+            self.view.display_tournament_not_found()
+            return
+        
+        # Continue to process tournament
+        print(f"Welcome to { tournament }")
+
     def choose_users(self, index):
         "Choose a player from the database to play in a tournament."
         player = None

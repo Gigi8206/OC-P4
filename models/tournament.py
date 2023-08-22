@@ -157,3 +157,8 @@ class TournamentManager:
                 tournament_file,
                 ensure_ascii=False,
             )
+
+    def get_by_name(self, name):
+        for tournament in self.tournaments:
+            if tournament.name == name:
+                return tournament

@@ -38,4 +38,7 @@ class MainMenuController:
                 self.player_controller.add_player()
             elif option == MenuOptions.ADD_TOURNAMENT:
                 self.tournament_controller.add_tournament()
+            elif option == MenuOptions.LOAD_TOURNAMENT:
+                self.tournament_controller.load_tournament()
+            
         print("Merci d'avoir utilisé ChessManager")

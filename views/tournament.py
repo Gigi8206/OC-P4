@@ -1,3 +1,5 @@
+from controllers.input import Input
+
 class TournamentView:
     def display(self):
         """Display the creation of a new tournament."""
@@ -23,3 +25,10 @@ class TournamentView:
     def display_next_round(self, i, j):
         """Display a match of a round different to the 1st round."""
         print(f"{self[i].first_name} vs {self[j].first_name}")
+
+    def input_tournament(self):
+        "Choose a uncompleted tournament in the database."
+        return  Input.for_string("Name of an uncompleted tournament ? ")
+    
+    def display_tournament_not_found(self):
+        print("Error: Tournament not found")

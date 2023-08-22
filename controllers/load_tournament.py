@@ -1,6 +1,4 @@
-from controllers.tournament import TournamentController
 from controllers.input import Input
-from models.round import Round
 from models.tournament import Tournament
 from views.tournament import TournamentView as View
 
