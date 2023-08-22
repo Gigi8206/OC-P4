@@ -47,8 +47,3 @@ git clone https://github.com/MarcOutt/OC_p4.git
 ```
 pip install -r requirements.txt
 ```
-<<<<<<< HEAD
-=======
-
-
->>>>>>> 11880c38d81ea49c26fdc2cced60e468b24d1d9c

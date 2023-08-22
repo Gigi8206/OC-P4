@@ -1,6 +1,8 @@
 from views.view_main import MainMenuView
 from controllers.tournament import TournamentController
 from controllers.player import PlayerController
+from controllers.match import MatchController
+from controllers.load_tournament import LoadTournamentController
 from enum import IntEnum
 
 class MenuOptions(IntEnum):
@@ -15,6 +17,8 @@ class MainMenuController:
         self.view = MainMenuView()
         self.player_controller = PlayerController()
         self.tournament_controller = TournamentController(self.player_controller.manager)
+        self.match_controller = MatchController()
+        self.load_tournament_controller = LoadTournamentController()
 
     def main_loop(self):
         option = 0
