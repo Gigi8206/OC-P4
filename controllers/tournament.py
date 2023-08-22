@@ -60,3 +60,4 @@ class TournamentController():
             player = self.choose_users(index)
             players.append(player)
         return players
+
