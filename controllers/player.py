@@ -24,7 +24,7 @@ class PlayerController():
         last_name = Input.for_string("Please enter player's last name: ").capitalize()
         birthday_string = Input.birthday("Please enter player's birth date (format = DD/MM/YYYY): ")
         identifier = Input.for_identifier("Please enter player's indentifier (ex: AB12345): ")
-        rank = Input.for_integer("Please enter player's rank : ")
+        # rank = Input.for_integer("Please enter player's rank : ")
         print("\n A player has been created.\n")
         birthday = datetime.strptime(birthday_string, "%d/%m/%Y").date()
         print(birthday)

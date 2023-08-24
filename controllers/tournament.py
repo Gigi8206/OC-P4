@@ -40,7 +40,7 @@ class TournamentController():
         self.manager.add_tournament(tournament)
 
     def load_tournament(self):
-        # Shoudl be in view
+        # Should be in view
         print("Tournaments available:")
         for tournament in self.manager.tournaments:
             print(tournament)
@@ -52,6 +52,8 @@ class TournamentController():
         
         # Continue to process tournament
         print(f"Welcome to { tournament }")
+
+        # ...
 
     def choose_users(self, index):
         "Choose a player from the database to play in a tournament."
