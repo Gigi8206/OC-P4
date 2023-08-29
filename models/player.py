@@ -34,7 +34,6 @@ class PlayerManager:
                 players = load(player_file)
                 for player in players:
                     player["birthday"] = parser.parse(player["birthday"]).date()
-                    print(player["birthday"])
                 return [Player(**player_dict) for player_dict in players]
         except FileNotFoundError:
             return []
