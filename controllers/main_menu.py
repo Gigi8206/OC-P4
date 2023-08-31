@@ -33,12 +33,10 @@ class MainMenuController:
             if option < 0 or option > 4:
                 print("Error: You should enter a valid option")
                 continue
-        
             if option == MenuOptions.ADD_PLAYER:
                 self.player_controller.add_player()
             elif option == MenuOptions.ADD_TOURNAMENT:
                 self.tournament_controller.add_tournament()
             elif option == MenuOptions.LOAD_TOURNAMENT:
                 self.tournament_controller.load_tournament()
-            
         print("Merci d'avoir utilisé ChessManager")

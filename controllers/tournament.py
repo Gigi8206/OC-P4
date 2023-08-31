@@ -49,9 +49,15 @@ class TournamentController():
         if not tournament:
             self.view.display_tournament_not_found()
             return
+<<<<<<< HEAD
         
         # Continue to process tournament
         print(f"Welcome to { tournament }")
+=======
+
+        # Continue to process tournament
+        print(f"Welcome to {tournament}")
+>>>>>>> e2febead8f5fceb3ec39c4f984fe75a52a1814f3
 
         # ...
 
@@ -64,7 +70,11 @@ class TournamentController():
             for index, player in enumerate(self.player_manager.players):
                 print(f"{index}: {player}")
             message = f"PLAYER {index}: Select your player "
+<<<<<<< HEAD
             numero = Input.for_string(message).capitalize()
+=======
+            numero = Input.for_integer(message)
+>>>>>>> e2febead8f5fceb3ec39c4f984fe75a52a1814f3
             player = self.player_manager.players[int(numero)]
         return player
 
@@ -76,4 +86,7 @@ class TournamentController():
             player = self.choose_users(index)
             players.append(player)
         return players
+<<<<<<< HEAD
 
+=======
+>>>>>>> e2febead8f5fceb3ec39c4f984fe75a52a1814f3
