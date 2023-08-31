@@ -28,7 +28,13 @@ class TournamentView:
 
     def input_tournament(self):
         "Choose a uncompleted tournament in the database."
-        return  Input.for_string("Name of an uncompleted tournament ? ")
+        return input("Name of an uncompleted tournament ? ")
     
     def display_tournament_not_found(self):
         print("Error: Tournament not found")
+
+    def choose_user(self, index):
+        "Choose a player from the database to play in a tournament."
+        message = f"Select your player: "
+        numero = Input.for_integer(message)
+        return numero

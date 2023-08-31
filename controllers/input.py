@@ -5,7 +5,7 @@ class Input:
     """Help class for input function."""
 
     @classmethod
-    def for_string(cls, message):
+    def for_word(cls, message):
         """Check if the value of an input is a string."""
         value = input(message)
         while not value.isalpha():

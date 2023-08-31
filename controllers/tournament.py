@@ -20,11 +20,10 @@ class TournamentController():
 
     def add_tournament(self):
         """Create a new tournament."""
-        name = Input.for_string("Please enter tournament's name : ")
-        location = Input.for_string("Please enter tournament's location : ")
+        name = input("Please enter tournament's name : ").strip()
+        location = Input.for_word("Please enter tournament's location : ")
         date = datetime.today().date()
         nb_rounds = 4
-        rounds = []
         desc = input("Please enter tournament's description : ")
 
         try:
@@ -34,7 +33,7 @@ class TournamentController():
             return
 
         tournament = Tournament(
-            name, location, date, nb_rounds, rounds, desc, players
+            name, location, date, players, nb_rounds=nb_rounds, desc=desc
         )
         self.manager.add_tournament(tournament)
 
@@ -50,28 +49,23 @@ class TournamentController():
             return
         
         # Continue to process tournament
-        print(f"Welcome to { tournament }")
+        print(f"Welcome to { tournament.name }")
 
         # ...
 
-    def choose_users(self, index):
-        "Choose a player from the database to play in a tournament."
-        player = None
-        while not player:
-            if len(self.player_manager.players) < 8:
-                raise ValueError("Error: Please add at least eight players first")
-            for index, player in enumerate(self.player_manager.players):
-                print(f"{index}: {player}")
-            message = f"PLAYER {index}: Select your player "
-            numero = Input.for_integer(message)
-            player = self.player_manager.players[int(numero)]
-        return player
-
     def create_list_players(self):
         """Create a list of 8 players from the database."""
-        players = []
         print("CHOOSE 8 PLAYERS FROM THE DATABASE\n")
+        
+        if len(self.player_manager.players) < 8:
+            raise ValueError("Error: Please add at least eight players first")
+        
+        players = []
         for index in range(8):
-            player = self.choose_users(index)
+            players_available = [player for player in self.player_manager.players if player not in players]
+            for index, player in enumerate(players_available):
+                print(f"{index}: {player}")
+            numero = self.view.choose_user(index)
+            player = players_available[numero]
             players.append(player)
         return players

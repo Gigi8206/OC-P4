@@ -1,8 +1,7 @@
 from views.view_main import MainMenuView
 from controllers.tournament import TournamentController
 from controllers.player import PlayerController
-from controllers.match import MatchController
-from controllers.load_tournament import LoadTournamentController
+from controllers.show_data import ShowDataController
 from enum import IntEnum
 
 class MenuOptions(IntEnum):
@@ -17,8 +16,7 @@ class MainMenuController:
         self.view = MainMenuView()
         self.player_controller = PlayerController()
         self.tournament_controller = TournamentController(self.player_controller.manager)
-        self.match_controller = MatchController()
-        self.load_tournament_controller = LoadTournamentController()
+        self.show_data_controller = ShowDataController(self.player_controller.manager, self.tournament_controller.manager)
 
     def main_loop(self):
         option = 0
@@ -39,4 +37,6 @@ class MainMenuController:
                 self.tournament_controller.add_tournament()
             elif option == MenuOptions.LOAD_TOURNAMENT:
                 self.tournament_controller.load_tournament()
+            elif option == MenuOptions.SHOW_DATA:
+                self.show_data_controller.run()
         print("Merci d'avoir utilisé ChessManager")

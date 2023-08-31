@@ -7,7 +7,7 @@ class Player:
         self.last_name = kwargs.get("last_name", None)
         self.birthday = kwargs.get("birthday", None)
         self.identifier = kwargs.get("identifier", None)
-        self.rank = kwargs.get("rank", None)
+        self.rank = 0
         self.total_score = 0
         self.played_with = []
 
