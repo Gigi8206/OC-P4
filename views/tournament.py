@@ -38,3 +38,5 @@ class TournamentView:
         message = f"Select your player: "
         numero = Input.for_integer(message)
         return numero
+    def all_players():
+        print("all players by name")

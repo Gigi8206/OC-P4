@@ -38,5 +38,5 @@ class MainMenuController:
             elif option == MenuOptions.LOAD_TOURNAMENT:
                 self.tournament_controller.load_tournament()
             elif option == MenuOptions.SHOW_DATA:
-                self.show_data_controller.run()
-        print("Merci d'avoir utilisé ChessManager")
+                self.show_data_controller.start_loop()
+                print("Merci d'avoir utilisé ChessManager")
