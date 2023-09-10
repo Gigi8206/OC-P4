@@ -1,6 +1,7 @@
 from models.round import Round
 from random import shuffle
 from json import dump
+import os
 
 
 class Tournament:
@@ -43,7 +44,20 @@ class TournamentManager:
                 tournament_file,
                 ensure_ascii=False,
             )
+    def load_tournaments_from_file(self):
+        if not os.path.exists('tournaments.json'):
+            return []
+        with open('tournaments.json', 'r') as file:
+            tournaments_data = json.load(file)
 
+        self.tournaments = []
+        for data in tournaments_data:
+            tournament = Tournament(**data)
+            tournament.rounds = [Round(**round_data)
+                                 for round_data in data['rounds']]
+            self.tournaments.append(tournament)
+
+        return self.tournaments
     def get_by_name(self, name):
         for tournament in self.tournaments:
             if tournament.name == name:

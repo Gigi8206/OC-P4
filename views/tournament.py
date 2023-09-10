@@ -40,3 +40,9 @@ class TournamentView:
         return numero
     def all_players():
         print("all players by name")
+
+    def tournament_loaded(self):
+        print("Tournament loaded from DataBase")
+
+    def tournament_not_found(self,tournament):
+        print(f"Tournament's name does not exist in DataBase: {tournament}")

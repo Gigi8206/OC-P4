@@ -39,4 +39,5 @@ class MainMenuController:
                 self.tournament_controller.load_tournament()
             elif option == MenuOptions.SHOW_DATA:
                 self.show_data_controller.start_loop()
+            elif option == MenuOptions.EXIT:
                 print("Merci d'avoir utilisé ChessManager")

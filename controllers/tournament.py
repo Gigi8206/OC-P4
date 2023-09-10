@@ -4,6 +4,16 @@ from controllers.input import Input
 from models.tournament import Tournament
 from models.tournament import TournamentManager
 from views.tournament import TournamentView as View
+import json
+
+
+def load_tournaments_from_file(file_name='tournament.json'):
+    try:
+        with open(file_name, 'r') as file:
+            tournaments = json.load(file)
+            return tournaments
+    except FileNotFoundError:
+        return []
 
 
 class TournamentController():
@@ -47,19 +57,15 @@ class TournamentController():
         if not tournament:
             self.view.display_tournament_not_found()
             return
-        
-        # Continue to process tournament
-        print(f"Welcome to { tournament.name }")
-
-        # ...
+        print(f"Welcome to {tournament.name}")
 
     def create_list_players(self):
         """Create a list of 8 players from the database."""
         print("CHOOSE 8 PLAYERS FROM THE DATABASE\n")
-        
+
         if len(self.player_manager.players) < 8:
             raise ValueError("Error: Please add at least eight players first")
-        
+
         players = []
         for index in range(8):
             players_available = [player for player in self.player_manager.players if player not in players]
