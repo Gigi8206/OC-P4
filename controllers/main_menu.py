@@ -1,3 +1,4 @@
+
 from views.view_main import MainMenuView
 from controllers.tournament import TournamentController
 from controllers.player import PlayerController
