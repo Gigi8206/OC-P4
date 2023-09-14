@@ -57,11 +57,11 @@ class ReportMenuView:
     @staticmethod
     def show_tournaments_list(tournaments):
         print("**************************************")
-        print('Tournament name || Start time || place')
+        print('Tournament name || Date || Place')
         print("**************************************")
         for tournament in tournaments:
             print(
-                f"{tournament.tournament_name}||{tournament.start_time}|| {tournament.place}||")
+                f"{tournament.name}||{tournament.date}|| {tournament.place}||")
             print("**************************************")
 
     def show_tournaments(tournament):

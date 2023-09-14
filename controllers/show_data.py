@@ -1,6 +1,4 @@
 from views.view_main import ReportMenuView
-from models.tournament import TournamentManager
-from controllers.tournament import TournamentController
 from models.player import PlayerManager
 from views.tournament import TournamentView
 
@@ -19,23 +17,14 @@ class ShowDataController:
         self.player_manager = player_manager
         self.tournament_manager = tournament_manager
         self.view = ReportMenuView()
-        self.tournament_list = None
-        self.tournament_date_name = None
-        self.tournament_players = None
-        self.rounds_matches = None
-        self.file_name = 'tournament.json'
 
     def start_loop(self):
-        option_selected = ReportsMenuOptions
+        option_selected = None
         while option_selected != ReportsMenuOptions.EXIT:
             option_selected = int(self.view.select_report())
             if option_selected == ReportsMenuOptions.ALL_PLAYERS:
-                TournamentView.all_players()
-            players = PlayerManager.load_players(self)
-            self.view.display_all_players(players)
+                ReportMenuView.display_all_players(self.player_manager.players)
             if option_selected == ReportsMenuOptions.TOURNAMENT_LIST:
-                tournament = self.tournament_manager.load_tournaments_from_file()
-                self.view.show_tournaments_list(tournament)
-
+                ReportMenuView.show_tournaments_list(self.tournament_manager.tournaments)
             if option_selected == ReportsMenuOptions.TOURNAMENT_DATE_NAME:
                 tournament = self.tournament_manager.load_tournaments_from_file()
