@@ -64,12 +64,25 @@ class ReportMenuView:
                 f"{tournament.name}||{tournament.date}|| {tournament.place}||")
             print("**************************************")
 
-    def show_tournaments(tournament):
-        print("**************************************")
-        print('Tournament name || Start time || place')
-        print("**************************************")
+    @staticmethod
+    def show_tournaments_name_date(tournaments):
+        for tournament in tournaments:
+            print(
+                f"{tournament.name}||{tournament.date}||")
+            print("**************************************")
+
+    @staticmethod
+    def display_tournament_players():
+        print("**********************")
+        print("Tournament's players by name : ")
+        print("**********************")
+
+    def player_infos(player):
         print(
-            f"{tournament.tournament_name}||{tournament.start_time}|| {tournament.place}||")
+            f"Name:{player['first_name']} {player['last_name']} Id: {player['identification']} Points: {player['points']}")
+        ("**************************************")
+
+
 
     def rounds(round):
         print(f"{round.name}")

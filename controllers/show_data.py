@@ -1,6 +1,7 @@
 from views.view_main import ReportMenuView
 from models.player import PlayerManager
 from views.tournament import TournamentView
+import json
 
 
 class ReportsMenuOptions():
@@ -27,4 +28,26 @@ class ShowDataController:
             if option_selected == ReportsMenuOptions.TOURNAMENT_LIST:
                 ReportMenuView.show_tournaments_list(self.tournament_manager.tournaments)
             if option_selected == ReportsMenuOptions.TOURNAMENT_DATE_NAME:
-                tournament = self.tournament_manager.load_tournaments_from_file()
+                ReportMenuView.show_tournaments_name_date(self.tournament_manager.tournaments)
+            if option_selected == ReportsMenuOptions.TOURNAMENT_PLAYERS:
+                ReportMenuView.display_tournament_players()
+                players_to_sort = []
+            if option_selected == ReportsMenuOptions.TOURNAMENT_ROUNDS_MATCHES:
+                with open('tournament.json') as file:
+                    data = json.load(file)
+                    tournament_name = TournamentView.input_tournament_name(
+                        self)
+                    for tournament in data:
+                        if tournament_name == tournament['tournament_name']:
+                            print("Tournament:", tournament['tournament_name'])
+                            for round_data in tournament["rounds"]:
+                                round_name = round_data["name"]
+                                print("Round:", round_name)
+                                for match in round_data["matches"]:
+                                    print("Match:")
+
+
+
+
+
+

@@ -25,6 +25,9 @@ class TournamentView:
     def display_next_round(self, i, j):
         """Display a match of a round different to the 1st round."""
         print(f"{self[i].first_name} vs {self[j].first_name}")
+    def input_tournament_name(self):
+        tournament_name = input("Enter tournament's name: ")
+        return tournament_name
 
     def input_tournament(self):
         "Choose a uncompleted tournament in the database."
@@ -41,8 +44,3 @@ class TournamentView:
     def all_players():
         print("all players by name")
 
-    def tournament_loaded(self):
-        print("Tournament loaded from DataBase")
-
-    def tournament_not_found(self,tournament):
-        print(f"Tournament's name does not exist in DataBase: {tournament}")
