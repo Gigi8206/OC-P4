@@ -3,6 +3,7 @@ from views.view_main import MainMenuView
 from controllers.tournament import TournamentController
 from controllers.player import PlayerController
 from controllers.show_data import ShowDataController
+from controllers.tournament_menu import ActionMenuController
 from enum import IntEnum
 
 class MenuOptions(IntEnum):

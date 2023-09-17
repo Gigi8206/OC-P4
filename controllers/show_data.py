@@ -1,7 +1,7 @@
 from views.view_main import ReportMenuView
 from models.player import PlayerManager
 from views.tournament import TournamentView
-
+import json
 
 
 class ReportsMenuOptions():
@@ -29,8 +29,6 @@ class ShowDataController:
                 ReportMenuView.show_tournaments_list(self.tournament_manager.tournaments)
             if option_selected == ReportsMenuOptions.TOURNAMENT_DATE_NAME:
                 ReportMenuView.show_tournaments_name_date(self.tournament_manager.tournaments)
-            if option_selected == ReportsMenuOptions.TOURNAMENT_DATE_NAME:
-                ReportMenuView.show_tournaments_name_date(self.tournament_manager.tournaments)
             if option_selected == ReportsMenuOptions.TOURNAMENT_PLAYERS:
                 ReportMenuView.display_tournament_players(self.tournament_manager.tournaments)
             if option_selected == ReportsMenuOptions.TOURNAMENT_ROUNDS_MATCHES:
@@ -42,7 +40,6 @@ class ShowDataController:
                             print("Round:", round.name)
                             for match in round.matches:
                                 print(f"Match: { match }")
-
 
 
 
