@@ -25,7 +25,9 @@ class TournamentView:
     def display_next_round(self, i, j):
         """Display a match of a round different to the 1st round."""
         print(f"{self[i].first_name} vs {self[j].first_name}")
-    def input_tournament_name(self):
+
+    @staticmethod
+    def input_tournament_name():
         tournament_name = input("Enter tournament's name: ")
         return tournament_name
 
@@ -39,14 +41,13 @@ class TournamentView:
             name = tournament.tournament_name
             start_time = tournament.start_time
             print(f"Tournament: {name}\tStart Time: {start_time}")
-    def ask_for_tournament(tournaments):
 
+    def ask_for_tournament(tournaments):
         return input('Which tournament do you want to load ? ')
 
     def tournament_loaded(self):
         print("Tournament loaded from DataBase")
 
-    
     def display_tournament_not_found(self):
         print("Error: Tournament not found")
 
@@ -55,6 +56,4 @@ class TournamentView:
         message = f"Select your player: "
         numero = Input.for_integer(message)
         return numero
-    def all_players():
-        print("all players by name")
 

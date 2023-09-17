@@ -20,4 +20,6 @@ class ActionMenuController:
         self.round_manager = RoundManager()
         self.tournaments = self.tournament_manager.load_tournaments_from_file()
         self.tournament_name = None
+
     def start_loop(self):
+        pass
