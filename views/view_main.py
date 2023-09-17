@@ -22,17 +22,9 @@ class ReportMenuView:
             "5: Main Menu\n"
             "Your choice ? "
         )
-    def display_players(self):
-        print(Tournament.players)
 
-    def tournaments_names(self):
-        for name in Tournament.tournament_names:
-            print(name)
-
-    def names_and_dates(self):
-        print(Tournament.tournament_dict)
-
-    def display_all_players(self, players):
+    @staticmethod
+    def display_all_players(players):
         print("**********************")
         print("All players by name : ")
         print("**********************")
@@ -43,11 +35,6 @@ class ReportMenuView:
             print(player)
             print("**********************")
 
-    @staticmethod
-    def display_tournament_players():
-        print("**********************")
-        print("Tournament's players by name : ")
-        print("**********************")
 
     def player_infos(player):
         print(
@@ -70,6 +57,19 @@ class ReportMenuView:
             print(
                 f"{tournament.name}||{tournament.date}||")
             print("**************************************")
+
+    @staticmethod
+    def display_tournament_players(tournaments):
+        for tournament in tournaments:
+            print(f"Tournament { tournament.name}")
+            print("**************************************")
+            for player in tournament.players:
+                print(f"{ player }")
+            print("**************************************")
+
+    def data_error(self):
+        print('Data error')
+
 
     def rounds(round):
         print(f"{round.name}")

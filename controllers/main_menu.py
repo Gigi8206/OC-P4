@@ -38,6 +38,8 @@ class MainMenuController:
                 self.tournament_controller.add_tournament()
             elif option == MenuOptions.LOAD_TOURNAMENT:
                 self.tournament_controller.load_tournament()
+                action_menu_controller = ActionMenuController()
+                action_menu_controller.start_loop()
             elif option == MenuOptions.SHOW_DATA:
                 self.show_data_controller.start_loop()
             elif option == MenuOptions.EXIT:
