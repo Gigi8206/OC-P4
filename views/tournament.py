@@ -32,6 +32,20 @@ class TournamentView:
     def input_tournament(self):
         "Choose a uncompleted tournament in the database."
         return input("Name of an uncompleted tournament ? ")
+
+    @staticmethod
+    def show_tournaments_name_date(tournaments):
+        for tournament in tournaments:
+            name = tournament.tournament_name
+            start_time = tournament.start_time
+            print(f"Tournament: {name}\tStart Time: {start_time}")
+    def ask_for_tournament(tournaments):
+
+        return input('Which tournament do you want to load ? ')
+
+    def tournament_loaded(self):
+        print("Tournament loaded from DataBase")
+
     
     def display_tournament_not_found(self):
         print("Error: Tournament not found")

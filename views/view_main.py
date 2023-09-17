@@ -21,6 +21,9 @@ class ReportMenuView:
             "4: All tournament's rounds and matches\n"
             "5: Main Menu\n"
             "Your choice ? "
+
+
+
         )
     def display_players(self):
         print(Tournament.players)
@@ -82,6 +85,8 @@ class ReportMenuView:
             f"Name:{player['first_name']} {player['last_name']} Id: {player['identification']} Points: {player['points']}")
         ("**************************************")
 
+    def data_error(self):
+        print('Data error')
 
 
     def rounds(round):

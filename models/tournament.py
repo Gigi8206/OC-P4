@@ -59,6 +59,13 @@ class TournamentManager:
             self.tournaments.append(tournament)
 
         return self.tournaments
+    def load_tournament_by_name(self, tournament_name):
+        tournaments = self.load_tournaments_from_file()
+        for tournament in tournaments:
+            if tournament.tournament_name == tournament_name:
+                self.tournament = tournament
+                return tournament
+        return None
 
     def get_by_name(self, name):
         for tournament in self.tournaments:
