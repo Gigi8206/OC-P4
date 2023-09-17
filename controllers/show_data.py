@@ -27,4 +27,9 @@ class ShowDataController:
             if option_selected == ReportsMenuOptions.TOURNAMENT_LIST:
                 ReportMenuView.show_tournaments_list(self.tournament_manager.tournaments)
             if option_selected == ReportsMenuOptions.TOURNAMENT_DATE_NAME:
-                tournament = self.tournament_manager.load_tournaments_from_file()
+                ReportMenuView.show_tournaments_name_date(self.tournament_manager.tournaments)
+            if option_selected == ReportsMenuOptions.TOURNAMENT_DATE_NAME:
+                ReportMenuView.show_tournaments_name_date(self.tournament_manager.tournaments)
+                
+
+
