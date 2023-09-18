@@ -1,4 +1,3 @@
-from models.round import Round
 from models.player import Player
 from dateutil import parser
 from random import shuffle

@@ -24,6 +24,16 @@ class ReportMenuView:
         )
 
     @staticmethod
+    def tournament_menu(self):
+        return input(
+            "Please choose an option to continue:\n"
+            "0: Add player(s) to a tournament\n"
+            "1: Start tournament\n"
+            "2: End tournament\n"
+            "3: Return to menu\n"
+            "Your choice ? "
+        )
+    @staticmethod
     def display_all_players(players):
         print("**********************")
         print("All players by name : ")
@@ -66,10 +76,6 @@ class ReportMenuView:
             for player in tournament.players:
                 print(f"{ player }")
             print("**************************************")
-
-    def data_error(self):
-        print('Data error')
-
 
     def rounds(round):
         print(f"{round.name}")

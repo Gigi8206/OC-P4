@@ -3,7 +3,8 @@ from views.view_main import MainMenuView
 from controllers.tournament import TournamentController
 from controllers.player import PlayerController
 from controllers.show_data import ShowDataController
-from controllers.tournament_menu import ActionMenuController
+from views.view_main import ReportMenuView
+from models.tournament import TournamentManager
 from enum import IntEnum
 
 class MenuOptions(IntEnum):
@@ -19,6 +20,7 @@ class MainMenuController:
         self.player_controller = PlayerController()
         self.tournament_controller = TournamentController(self.player_controller.manager)
         self.show_data_controller = ShowDataController(self.player_controller.manager, self.tournament_controller.manager)
+        self.tournament_manager = TournamentManager
 
     def main_loop(self):
         option = 0
@@ -39,8 +41,7 @@ class MainMenuController:
                 self.tournament_controller.add_tournament()
             elif option == MenuOptions.LOAD_TOURNAMENT:
                 self.tournament_controller.load_tournament()
-                action_menu_controller = ActionMenuController()
-                action_menu_controller.start_loop()
+                ReportMenuView.tournament_menu(self.tournament_manager)
             elif option == MenuOptions.SHOW_DATA:
                 self.show_data_controller.start_loop()
             elif option == MenuOptions.EXIT:
