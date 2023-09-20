@@ -1,4 +1,10 @@
 class MainMenuView:
+    @staticmethod
+    def app_title():
+        print("\n\n----------------------------------")
+        print("        CHESS TOURNAMENTS")
+        print("----------------------------------")
+
     def display_options(self):
         print(
             "Select an option:\n"\
@@ -23,16 +29,7 @@ class ReportMenuView:
             "Your choice ? "
         )
 
-    @staticmethod
-    def tournament_menu(self):
-        return input(
-            "Please choose an option to continue:\n"
-            "0: Add player(s) to a tournament\n"
-            "1: Start tournament\n"
-            "2: End tournament\n"
-            "3: Return to menu\n"
-            "Your choice ? "
-        )
+
     @staticmethod
     def display_all_players(players):
         print("**********************")
@@ -83,3 +80,19 @@ class ReportMenuView:
     def matches(player1, player2):
         print(
             f"Match: {player1.name}{player1.points} vs {player1.name} {player2.points}")
+
+
+
+class MenuViews:
+    @staticmethod
+    def input_prompt_text(option):
+        print(f"\nEnter {option} (type [back] for main menu) : ", end='')
+
+    @staticmethod
+    def input_prompt():
+        print("\nType [option] and press Enter : ", end='')
+
+
+
+
+

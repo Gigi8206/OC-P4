@@ -1,9 +1,10 @@
 from models.player import Player
 from dateutil import parser
+from models.round import Round
 from random import shuffle
 from json import dump, load
 import os
-
+from tinydb import TinyDB
 
 class Tournament:
     def __init__(self, name="", place=None, date=None,
@@ -76,3 +77,4 @@ class TournamentManager:
         for tournament in self.tournaments:
             if tournament.name == name:
                 return tournament
+
