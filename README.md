@@ -33,7 +33,7 @@ ou :
 
 1. Téléchargez le projet sur votre répertoire local : 
 ```
-git clone https://github.com/MarcOutt/OC_p4.git](https://github.com/Gigi8206/OC-P4.git)
+git clone https://github.com/Gigi8206/OC-P4.git)
 ```
 
 2. Mettez en place un environnement virtuel :
