@@ -4,7 +4,7 @@ from models.round import Round
 from random import shuffle
 from json import dump, load
 import os
-
+from tinydb import TinyDB
 
 class Tournament:
     def __init__(self, name="", place=None, date=None,
