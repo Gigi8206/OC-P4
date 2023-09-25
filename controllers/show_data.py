@@ -19,7 +19,9 @@ class ShowDataController:
         self.tournament_manager = tournament_manager
         self.view = ReportMenuView()
 
+
     def start_loop(self):
+        user_input = input().lower()
         option_selected = None
         while option_selected != ReportsMenuOptions.EXIT:
             option_selected = int(self.view.select_report())
@@ -40,8 +42,15 @@ class ShowDataController:
                             print("Round:", round.name)
                             for match in round.matches:
                                 print(f"Match: { match }")
+            if user_input == "y":
+                exit()
+            elif user_input == "n":
+                (self.start_loop())
 
-
+    @staticmethod
+    def back_to_menu():
+        from controllers.main_menu import MainMenuController
+        MainMenuController.start_loop()
 
 
 

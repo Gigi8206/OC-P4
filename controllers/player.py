@@ -4,8 +4,6 @@ from models.player import Player, PlayerManager
 from views.player import CreatePlayer as View
 from controllers.input import Input
 from models.tournament import Tournament
-from models.round import Round
-from models.match import Match
 from models.player import Player
 
 class PlayerController():

@@ -1,19 +1,11 @@
 from datetime import datetime
-
 from controllers.input import Input
 from models.tournament import Tournament
 from models.tournament import TournamentManager
 from views.tournament import TournamentView as View
-import json
+from views.round import RoundViews
+from views.view_main import MainMenuView
 
-
-def load_tournaments_from_file(file_name='tournament.json'):
-    try:
-        with open(file_name, 'r') as file:
-            tournaments = json.load(file)
-            return tournaments
-    except FileNotFoundError:
-        return []
 
 
 class TournamentController():
@@ -24,9 +16,9 @@ class TournamentController():
         self.view = View()
         self.manager = TournamentManager()
         self.player_manager = player_manager
-
-    def display(self):
-        self.view.display()
+        self.round_view = RoundViews()
+        self.menu_view = MainMenuView()
+        self.timer = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
     def add_tournament(self):
         """Create a new tournament."""
@@ -48,7 +40,7 @@ class TournamentController():
         self.manager.add_tournament(tournament)
 
     def load_tournament(self):
-        # Should be in view
+
         print("Tournaments available:")
         for tournament in self.manager.tournaments:
             print(tournament)
@@ -81,3 +73,4 @@ class TournamentController():
             player = players_available[numero]
             players.append(player)
         return players
+

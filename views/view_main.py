@@ -1,4 +1,10 @@
 class MainMenuView:
+    @staticmethod
+    def app_title():
+        print("\n\n----------------------------------")
+        print("        CHESS TOURNAMENTS")
+        print("----------------------------------")
+
     def display_options(self):
         print(
             "Select an option:\n"\
@@ -22,6 +28,7 @@ class ReportMenuView:
             "5: Main Menu\n"
             "Your choice ? "
         )
+
 
     @staticmethod
     def display_all_players(players):
@@ -67,13 +74,27 @@ class ReportMenuView:
                 print(f"{ player }")
             print("**************************************")
 
-    def data_error(self):
-        print('Data error')
-
-
     def rounds(round):
         print(f"{round.name}")
 
     def matches(player1, player2):
         print(
             f"Match: {player1.name}{player1.points} vs {player1.name} {player2.points}")
+
+    @staticmethod
+    def input_error():
+        print("\nInput error, please enter a valid option.")
+
+class MenuViews:
+    @staticmethod
+    def input_prompt_text(option):
+        print(f"\nEnter {option} (type [back] for main menu) : ", end='')
+
+    @staticmethod
+    def input_prompt():
+        print("\nType [option] and press Enter : ", end='')
+
+
+
+
+
