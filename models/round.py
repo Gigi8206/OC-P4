@@ -1,32 +1,19 @@
+from random import shuffle
+
 class Round:
+    def __init__(self, players):
+        self.players = players
+        self.matches = self.organize_matches()
 
-    def __init__(
-            self,
-            round_name: str,
-            start_datetime: str,
-
-    ):
-        self.round_name = round_name
-        self.start_datetime = start_datetime
-        self.matches = []
-
-    def set_round(self):
-        """Return round info as list"""
+    def organize_matches(self):
+        current_players = self.players
+        # if sum([player.score for player in current_players]) == 0:
+        shuffle(current_players)
         return [
-            self.round_name,
-            self.start_datetime,
-            self.matches
+            ([player_pair[0], player_pair[0].score], [player_pair[1], player_pair[1].score])
+            for player_pair in zip(current_players[0::2], current_players[1::2])
+            if len(player_pair) == 2
         ]
 
-    def get_match_pairing(self, player_1, player_2):
-        """Set match paring as tuple"""
-        match = (
-            f"{player_1['last_name']}, {player_1['first_name']}",
-            player_1["rank"],
-            player_1["score"],
-            f"{player_2['last_name']}, {player_2['first_name']}",
-            player_2["rank"],
-            player_2["score"]
-        )
-        self.matches.append(match)
-
+    def __repr__(self) -> str:
+        return f"{ [ f'{ match[0][0].first_name } { match[0][0].last_name } vs { match[1][0].first_name } { match[1][0].last_name }' for match in self.matches] }"

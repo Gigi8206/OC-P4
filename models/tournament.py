@@ -12,9 +12,20 @@ class Tournament:
         self.place = place
         self.date = date
         self.players = players
+        self.current_round = 0
         self.nb_rounds = nb_rounds
         self.rounds = rounds
         self.desc = desc
+
+        self.reset_scores()
+        self.get_next_round()
+        self.get_next_round()
+        self.get_next_round()
+        self.get_next_round()
+
+        
+        for round in self.rounds:
+            print(round)
 
     def __str__(self):
         return f"Tournoi: {self.name}"
@@ -25,10 +36,18 @@ class Tournament:
             "place": self.place,
             "date": self.date.isoformat(),
             "players": [player.to_json() for player in self.players],
+            "current_round": self.current_round,
             "nb_rounds": self.nb_rounds,
             "rounds": self.rounds,
             "desc": self.desc,
         }
+
+    def reset_scores(self):
+        for player in self.players:
+            player.score = 0
+
+    def get_next_round(self):
+        self.rounds.append(Round(self.players))
 
 
 class TournamentManager:

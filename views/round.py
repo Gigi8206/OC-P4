@@ -9,19 +9,16 @@ class RoundViews:
         self.round_field_names = [
             "Match #",
             "Name P1",
-            "Rank P1",
             "Score P1",
             " ",
             "Name P2",
-            "Rank P2",
             "Score P2"
         ]
 
         self.results_field_names = [
             "Tournament ranking",
             "Name",
-            "Final Score",
-            "Global ranking"
+            "Final Score"
         ]
 
     def display_matches(self, matches):
@@ -46,8 +43,7 @@ class RoundViews:
             self.table.add_row([
                 i+1,
                 t.players[i]["last_name"] + ", " + t.players[i]["first_name"],
-                t.players[i]["score"],
-                t.players[i]["rank"]
+                t.players[i]["score"]
             ])
 
         print("\n\n- FINAL SCORES -\n")

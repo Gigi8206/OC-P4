@@ -7,12 +7,10 @@ class Player:
         self.last_name = kwargs.get("last_name", None)
         self.birthday = kwargs.get("birthday", None)
         self.identifier = kwargs.get("identifier", None)
-        self.rank = 0
-        self.total_score = 0
-        self.played_with = []
+        self.score = 0
 
     def __repr__(self):
-        return f"{self.first_name} {self.last_name}: {self.identifier} - {self.birthday.isoformat()} - {self.rank}"
+        return f"{self.first_name} {self.last_name}: {self.identifier} - {self.birthday.isoformat()} - {self.score}"
 
     def to_json(self):
         return {
@@ -20,7 +18,7 @@ class Player:
             "last_name": self.last_name,
             "birthday": self.birthday.isoformat(),
             "identifier": self.identifier,
-            "rank": self.rank
+            "score": self.score
         }
 
 class PlayerManager:
