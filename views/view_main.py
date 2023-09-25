@@ -81,7 +81,9 @@ class ReportMenuView:
         print(
             f"Match: {player1.name}{player1.points} vs {player1.name} {player2.points}")
 
-
+    @staticmethod
+    def input_error():
+        print("\nInput error, please enter a valid option.")
 
 class MenuViews:
     @staticmethod

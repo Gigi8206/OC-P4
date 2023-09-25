@@ -4,11 +4,10 @@ class Round:
             self,
             round_name: str,
             start_datetime: str,
-            end_datetime: str
+
     ):
         self.round_name = round_name
         self.start_datetime = start_datetime
-        self.end_datetime = end_datetime
         self.matches = []
 
     def set_round(self):
@@ -16,7 +15,6 @@ class Round:
         return [
             self.round_name,
             self.start_datetime,
-            self.end_datetime,
             self.matches
         ]
 

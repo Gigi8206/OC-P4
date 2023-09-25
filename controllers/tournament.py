@@ -4,9 +4,8 @@ from models.tournament import Tournament
 from models.tournament import TournamentManager
 from views.tournament import TournamentView as View
 from views.round import RoundViews
-from models.round import Round
-from views.view_main import MenuViews
-import json
+from views.view_main import MainMenuView
+
 
 
 class TournamentController():
@@ -18,7 +17,7 @@ class TournamentController():
         self.manager = TournamentManager()
         self.player_manager = player_manager
         self.round_view = RoundViews()
-        self.menu_view = MenuViews()
+        self.menu_view = MainMenuView()
         self.timer = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
     def add_tournament(self):
@@ -41,7 +40,7 @@ class TournamentController():
         self.manager.add_tournament(tournament)
 
     def load_tournament(self):
-        # Should be in view
+
         print("Tournaments available:")
         for tournament in self.manager.tournaments:
             print(tournament)
@@ -51,6 +50,8 @@ class TournamentController():
             self.view.display_tournament_not_found()
             return
         print(f"Welcome to {tournament.name}")
+
+
 
     def create_list_players(self):
         """Create a list of 8 players from the database."""

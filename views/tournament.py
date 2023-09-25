@@ -21,12 +21,11 @@ class TournamentView:
     @staticmethod
     def tournament_menu(self):
         return input(
-            "Please choose an option to continue:\n"
-            "0: Add player(s) to a tournament\n"
-            "1: Start tournament\n"
-            "2: End tournament\n"
-            "3: Return to menu\n"
-            "Your choice ? "
+            ("Menu tournoi : Tapez le numéro de votre choix : \n"
+             "1 - Créer un nouveau tournoi \n"
+             "2 - Récupérer tournoi existant \n"
+             "3 - Supprimer les tournois \n"
+             "4 - Retour au menu principal \n")
         )
 
     def choose_user(self, index):
