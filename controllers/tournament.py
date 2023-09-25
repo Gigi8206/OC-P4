@@ -59,6 +59,12 @@ class TournamentController():
             return
         print(f"Welcome to {tournament.name}")
 
+        # TODO: Continuer de charger le tournoi
+        # Créer les matchs et les rounds
+        # Demande à l'utilisateur s'il veut lancer le prochain round
+        # Demande à l'utilisateur quel est le résultat des matchs
+        # Mettre à jour les scores
+
     def create_list_players(self):
         """Create a list of 8 players from the database."""
         print("CHOOSE 8 PLAYERS FROM THE DATABASE\n")
