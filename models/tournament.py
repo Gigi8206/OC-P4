@@ -4,10 +4,10 @@ from models.round import Round
 from random import shuffle
 from json import dump, load
 import os
+import json
 
 class Tournament:
-    def __init__(self, name="", place=None, date=None,
-                 players=[], rounds=[], nb_rounds=4, desc=""):
+    def __init__(self, name, place, date,players= [], rounds = [], nb_rounds=4, desc=""):
         self.name = name
         self.place = place
         self.date = date
@@ -30,17 +30,16 @@ class Tournament:
     def __str__(self):
         return f"Tournoi: {self.name}"
 
-    def to_json(self):
-        return {
-            "name": self.name,
+    def tournament_to_json(self):
+       return {  "name": self.name,
             "place": self.place,
             "date": self.date.isoformat(),
-            "players": [player.to_json() for player in self.players],
-            "current_round": self.current_round,
+            "players": [player.player_to_json() for player in self.players],
+            "rounds": [round.round_to_json() for round in self.rounds],
             "nb_rounds": self.nb_rounds,
-            "rounds": self.rounds,
             "desc": self.desc,
         }
+
 
     def reset_scores(self):
         for player in self.players:
@@ -61,9 +60,9 @@ class TournamentManager:
         self.tournaments.append(tournament)
         with open("tournament.json", "w", encoding="utf-8") as tournament_file:
             dump(
-                [tournament.to_json() for tournament in self.tournaments],
+                [tournament.tournament_to_json() for tournament in self.tournaments],
                 tournament_file,
-                ensure_ascii=False,
+                ensure_ascii=False, indent=4
             )
 
     def load_tournaments_from_file(self):

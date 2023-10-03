@@ -5,6 +5,7 @@ from models.tournament import TournamentManager
 from views.tournament import TournamentView as View
 from views.round import RoundViews
 from views.view_main import MainMenuView
+import json
 
 
 
@@ -73,4 +74,5 @@ class TournamentController():
             player = players_available[numero]
             players.append(player)
         return players
+
 

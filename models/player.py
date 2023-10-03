@@ -12,7 +12,7 @@ class Player:
     def __repr__(self):
         return f"{self.first_name} {self.last_name}: {self.identifier} - {self.birthday.isoformat()} - {self.score}"
 
-    def to_json(self):
+    def player_to_json(self):
         return {
             "first_name": self.first_name,
             "last_name": self.last_name,
@@ -43,5 +43,11 @@ class PlayerManager:
 
         self.players.append(player)
         with open('players.json', 'w', encoding="utf-8") as player_file:
-            dump([player.to_json() for player in self.players], player_file, ensure_ascii=False)
+            dump(
+                [player.player_to_json() for player in self.players],
+                player_file,
+                ensure_ascii=False, indent=4
+            )
         return player
+
+

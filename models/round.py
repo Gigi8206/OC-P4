@@ -17,3 +17,9 @@ class Round:
 
     def __repr__(self) -> str:
         return f"{ [ f'{ match[0][0].first_name } { match[0][0].last_name } vs { match[1][0].first_name } { match[1][0].last_name }' for match in self.matches] }"
+
+    def round_to_json(self):
+        return {
+            "players": self.players,
+            "matches": self.matches,
+        }
