@@ -3,7 +3,6 @@ from controllers.input import Input
 from models.tournament import Tournament
 from models.tournament import TournamentManager
 from views.tournament import TournamentView as View
-from views.round import RoundViews
 from views.view_main import MainMenuView
 import json
 
@@ -17,7 +16,6 @@ class TournamentController():
         self.view = View()
         self.manager = TournamentManager()
         self.player_manager = player_manager
-        self.round_view = RoundViews()
         self.menu_view = MainMenuView()
         self.timer = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
