@@ -33,12 +33,13 @@ class TournamentController():
             players = self.create_list_players()
         except ValueError as error:
             print(error)
-            return
+            return print("\n A New Tournament has been created.\n")
 
         tournament = Tournament(
             name, location, date, players, nb_rounds=nb_rounds, desc=desc
         )
-        self.manager.add_tournament(tournament)
+        result = self.manager.add_tournament(tournament)
+        return "main menu"
 
     def load_tournament(self):
 

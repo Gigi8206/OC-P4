@@ -1,5 +1,6 @@
 from json import dump, load
 from dateutil import parser
+import json
 
 class Player:
     def __init__(self, **kwargs):
@@ -20,6 +21,7 @@ class Player:
             "identifier": self.identifier,
             "score": self.score
         }
+
 
 class PlayerManager:
     def __init__(self):
@@ -43,7 +45,7 @@ class PlayerManager:
 
         self.players.append(player)
         with open('players.json', 'w', encoding="utf-8") as player_file:
-            dump(
+            json.dump(
                 [player.player_to_json() for player in self.players],
                 player_file,
                 ensure_ascii=False, indent=4

@@ -23,9 +23,10 @@ class Tournament:
         self.get_next_round()
         self.get_next_round()
 
-        
         for round in self.rounds:
             print(round)
+
+
 
     def __str__(self):
         return f"Tournoi: {self.name}"

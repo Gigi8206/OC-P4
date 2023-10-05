@@ -20,6 +20,6 @@ class Round:
 
     def round_to_json(self):
         return {
-            "players": self.players,
+            "players": [player.player_to_json() for player in self.players],
             "matches": self.matches,
         }
