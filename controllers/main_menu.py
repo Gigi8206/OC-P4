@@ -17,17 +17,11 @@ class MenuOptions(IntEnum):
     EXIT = 4
 
 class MainMenuController:
-
-
     def __init__(self):
         self.view = MainMenuView()
         self.player_controller = PlayerController()
         self.tournament_controller = TournamentController(self.player_controller.manager)
         self.show_data_controller = ShowDataController(self.player_controller.manager, self.tournament_controller.manager)
-        self.tournament_manager = TournamentManager
-        self.menu_view = MenuViews()
-        self.tournament_view = TournamentView
-        self.tour_cont = TournamentController
 
     def main_loop(self):
         option = 0
@@ -48,11 +42,11 @@ class MainMenuController:
                 self.tournament_controller.add_tournament()
             elif option == MenuOptions.LOAD_TOURNAMENT:
                 self.tournament_controller.load_tournament()
-                TournamentView.tournament_menu(self.tournament_view)
             elif option == MenuOptions.SHOW_DATA:
                 self.show_data_controller.start_loop()
             elif option == MenuOptions.EXIT:
                 print("Merci d'avoir utilisé ChessManager")
+
 class MenuTournament(IntEnum):
     ADD_TOURNAMENT = 0,
     LOAD_TOURNAMENT = 1,

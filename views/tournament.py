@@ -8,8 +8,11 @@ class TournamentView:
         return tournament_name
 
     def input_tournament(self):
-        "Choose a uncompleted tournament in the database."
+        print("Choose a uncompleted tournament in the database.")
         return input("Name of an uncompleted tournament ? ")
+
+    def input_ask_next_round(self, nb_round):
+        return (input(f"Do you want to launch round { nb_round } (yes/no) ?"))
 
     @staticmethod
     def show_tournaments_name_date(tournaments):

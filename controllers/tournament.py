@@ -3,8 +3,8 @@ from controllers.input import Input
 from models.tournament import Tournament
 from models.tournament import TournamentManager
 from views.tournament import TournamentView as View
-from views.round import RoundViews
 from views.view_main import MainMenuView
+import json
 
 
 
@@ -16,7 +16,6 @@ class TournamentController():
         self.view = View()
         self.manager = TournamentManager()
         self.player_manager = player_manager
-        self.round_view = RoundViews()
         self.menu_view = MainMenuView()
         self.timer = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
@@ -32,15 +31,15 @@ class TournamentController():
             players = self.create_list_players()
         except ValueError as error:
             print(error)
-            return
+            return print("\n A New Tournament has been created.\n")
 
         tournament = Tournament(
             name, location, date, players, nb_rounds=nb_rounds, desc=desc
         )
-        self.manager.add_tournament(tournament)
+        result = self.manager.add_tournament(tournament)
+        return "main menu"
 
     def load_tournament(self):
-
         print("Tournaments available:")
         for tournament in self.manager.tournaments:
             print(tournament)
@@ -52,10 +51,25 @@ class TournamentController():
         print(f"Welcome to {tournament.name}")
 
         # TODO: Continuer de charger le tournoi
-        # Créer les matchs et les rounds
-        # Demande à l'utilisateur s'il veut lancer le prochain round
-        # Demande à l'utilisateur quel est le résultat des matchs
-        # Mettre à jour les scores
+        self.loop_rounds(tournament)
+
+    def loop_round(self, tournament):
+        while tournament.current_round < tournament.nb_rounds:
+            result = self.view.input_ask_next_round(tournament.current_round)
+            while result not in ('yes', 'no'):
+                result = self.view.input_ask_next_round(tournament.current_round)
+            
+            if result == 'no':
+                return
+            
+            for match in tournament.rounds[tournament.current_round].matches:
+                for player in match:
+                    score = input(f"Quel est le score du joueur { player.first_name } {player.last_name} ? ")
+                    player[1] = score
+
+            tournament.current_round += 1
+            tournament.get_next_round()
+
 
     def create_list_players(self):
         """Create a list of 8 players from the database."""
@@ -73,4 +87,5 @@ class TournamentController():
             player = players_available[numero]
             players.append(player)
         return players
+
 

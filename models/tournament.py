@@ -4,50 +4,58 @@ from models.round import Round
 from random import shuffle
 from json import dump, load
 import os
+import json
 
 class Tournament:
-    def __init__(self, name="", place=None, date=None,
-                 players=[], rounds=[], nb_rounds=4, desc=""):
-        self.name = name
-        self.place = place
-        self.date = date
-        self.players = players
+    def __init__(self, players=[], rounds=[], nb_rounds=4, desc="", **kwargs):
+        self.desc = desc
+        self.name = kwargs.get('name')
+        self.place = kwargs.get('place')
+        self.date = kwargs.get('date')
+
         self.current_round = 0
         self.nb_rounds = nb_rounds
-        self.rounds = rounds
-        self.desc = desc
 
-        self.reset_scores()
-        self.get_next_round()
-        self.get_next_round()
-        self.get_next_round()
-        self.get_next_round()
-
+        self.players = players[:]
+        self.convert_players()
+        self.rounds = rounds[:] # Passing by copy, not reference to avoid strange reference
+        self.convert_rounds()
         
-        for round in self.rounds:
-            print(round)
-
+        if not self.rounds:
+            self.reset_scores()
+            self.get_next_round()
+        
     def __str__(self):
         return f"Tournoi: {self.name}"
 
-    def to_json(self):
-        return {
-            "name": self.name,
+    def convert_players(self):
+        for index, player in enumerate(self.players):
+            if type(player) == dict:
+                self.players[index] = Player(**player)
+
+    def convert_rounds(self):
+        for index, round in enumerate(self.rounds):
+            if type(round) == dict:
+                self.rounds[index] = Round(**round)
+
+    def tournament_to_json(self):
+       return {  "name": self.name,
             "place": self.place,
             "date": self.date.isoformat(),
             "players": [player.to_json() for player in self.players],
-            "current_round": self.current_round,
+            "rounds": [round.round_to_json() for round in self.rounds],
             "nb_rounds": self.nb_rounds,
-            "rounds": self.rounds,
             "desc": self.desc,
         }
+
 
     def reset_scores(self):
         for player in self.players:
             player.score = 0
 
     def get_next_round(self):
-        self.rounds.append(Round(self.players))
+        if len(self.rounds) < self.nb_rounds:
+            self.rounds.append(Round(self.players))
 
 
 class TournamentManager:
@@ -61,9 +69,9 @@ class TournamentManager:
         self.tournaments.append(tournament)
         with open("tournament.json", "w", encoding="utf-8") as tournament_file:
             dump(
-                [tournament.to_json() for tournament in self.tournaments],
+                [tournament.tournament_to_json() for tournament in self.tournaments],
                 tournament_file,
-                ensure_ascii=False,
+                ensure_ascii=False, indent=4
             )
 
     def load_tournaments_from_file(self):
@@ -76,10 +84,6 @@ class TournamentManager:
         self.tournaments = []
         for data in tournaments_data:
             tournament = Tournament(**data)
-            tournament.rounds = [Round(**round_data) for round_data in data['rounds']]
-            for player_data in data['players']:
-                player_data["birthday"] = parser.parse(player_data["birthday"]).date()
-            tournament.players = [Player(**player_data) for player_data in data['players']]
             self.tournaments.append(tournament)
         return self.tournaments
 

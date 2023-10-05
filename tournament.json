@@ -1,0 +1,669 @@
+[
+    {
+        "name": "Grand Tournoi",
+        "place": "Paris",
+        "date": "2023-10-05",
+        "players": [
+            {
+                "first_name": "H",
+                "last_name": "L",
+                "birthday": "2003-06-30",
+                "identifier": "HL12345",
+                "score": 0
+            },
+            {
+                "first_name": "E",
+                "last_name": "L",
+                "birthday": "2000-06-30",
+                "identifier": "EB12345",
+                "score": 0
+            },
+            {
+                "first_name": "D",
+                "last_name": "L",
+                "birthday": "1999-06-30",
+                "identifier": "DB12345",
+                "score": 0
+            },
+            {
+                "first_name": "F",
+                "last_name": "L",
+                "birthday": "2001-06-30",
+                "identifier": "FL12345",
+                "score": 0
+            },
+            {
+                "first_name": "C",
+                "last_name": "L",
+                "birthday": "1998-06-30",
+                "identifier": "CB12345",
+                "score": 0
+            },
+            {
+                "first_name": "B",
+                "last_name": "L",
+                "birthday": "1997-06-30",
+                "identifier": "BB12345",
+                "score": 0
+            },
+            {
+                "first_name": "A",
+                "last_name": "L",
+                "birthday": "1996-06-30",
+                "identifier": "AB12345",
+                "score": 0
+            },
+            {
+                "first_name": "G",
+                "last_name": "L",
+                "birthday": "2002-06-30",
+                "identifier": "GB12345",
+                "score": 0
+            }
+        ],
+        "rounds": [
+            {
+                "players": [
+                    {
+                        "first_name": "H",
+                        "last_name": "L",
+                        "birthday": "2003-06-30",
+                        "identifier": "HL12345",
+                        "score": 0
+                    },
+                    {
+                        "first_name": "E",
+                        "last_name": "L",
+                        "birthday": "2000-06-30",
+                        "identifier": "EB12345",
+                        "score": 0
+                    },
+                    {
+                        "first_name": "D",
+                        "last_name": "L",
+                        "birthday": "1999-06-30",
+                        "identifier": "DB12345",
+                        "score": 0
+                    },
+                    {
+                        "first_name": "F",
+                        "last_name": "L",
+                        "birthday": "2001-06-30",
+                        "identifier": "FL12345",
+                        "score": 0
+                    },
+                    {
+                        "first_name": "C",
+                        "last_name": "L",
+                        "birthday": "1998-06-30",
+                        "identifier": "CB12345",
+                        "score": 0
+                    },
+                    {
+                        "first_name": "B",
+                        "last_name": "L",
+                        "birthday": "1997-06-30",
+                        "identifier": "BB12345",
+                        "score": 0
+                    },
+                    {
+                        "first_name": "A",
+                        "last_name": "L",
+                        "birthday": "1996-06-30",
+                        "identifier": "AB12345",
+                        "score": 0
+                    },
+                    {
+                        "first_name": "G",
+                        "last_name": "L",
+                        "birthday": "2002-06-30",
+                        "identifier": "GB12345",
+                        "score": 0
+                    }
+                ],
+                "matches": [
+                    [
+                        [
+                            {
+                                "first_name": "C",
+                                "last_name": "L",
+                                "birthday": "1998-06-30",
+                                "identifier": "CB12345",
+                                "score": 0
+                            },
+                            0
+                        ],
+                        [
+                            {
+                                "first_name": "A",
+                                "last_name": "L",
+                                "birthday": "1996-06-30",
+                                "identifier": "AB12345",
+                                "score": 0
+                            },
+                            0
+                        ]
+                    ],
+                    [
+                        [
+                            {
+                                "first_name": "B",
+                                "last_name": "L",
+                                "birthday": "1997-06-30",
+                                "identifier": "BB12345",
+                                "score": 0
+                            },
+                            0
+                        ],
+                        [
+                            {
+                                "first_name": "D",
+                                "last_name": "L",
+                                "birthday": "1999-06-30",
+                                "identifier": "DB12345",
+                                "score": 0
+                            },
+                            0
+                        ]
+                    ],
+                    [
+                        [
+                            {
+                                "first_name": "H",
+                                "last_name": "L",
+                                "birthday": "2003-06-30",
+                                "identifier": "HL12345",
+                                "score": 0
+                            },
+                            0
+                        ],
+                        [
+                            {
+                                "first_name": "E",
+                                "last_name": "L",
+                                "birthday": "2000-06-30",
+                                "identifier": "EB12345",
+                                "score": 0
+                            },
+                            0
+                        ]
+                    ],
+                    [
+                        [
+                            {
+                                "first_name": "G",
+                                "last_name": "L",
+                                "birthday": "2002-06-30",
+                                "identifier": "GB12345",
+                                "score": 0
+                            },
+                            0
+                        ],
+                        [
+                            {
+                                "first_name": "F",
+                                "last_name": "L",
+                                "birthday": "2001-06-30",
+                                "identifier": "FL12345",
+                                "score": 0
+                            },
+                            0
+                        ]
+                    ]
+                ]
+            },
+            {
+                "players": [
+                    {
+                        "first_name": "H",
+                        "last_name": "L",
+                        "birthday": "2003-06-30",
+                        "identifier": "HL12345",
+                        "score": 0
+                    },
+                    {
+                        "first_name": "E",
+                        "last_name": "L",
+                        "birthday": "2000-06-30",
+                        "identifier": "EB12345",
+                        "score": 0
+                    },
+                    {
+                        "first_name": "D",
+                        "last_name": "L",
+                        "birthday": "1999-06-30",
+                        "identifier": "DB12345",
+                        "score": 0
+                    },
+                    {
+                        "first_name": "F",
+                        "last_name": "L",
+                        "birthday": "2001-06-30",
+                        "identifier": "FL12345",
+                        "score": 0
+                    },
+                    {
+                        "first_name": "C",
+                        "last_name": "L",
+                        "birthday": "1998-06-30",
+                        "identifier": "CB12345",
+                        "score": 0
+                    },
+                    {
+                        "first_name": "B",
+                        "last_name": "L",
+                        "birthday": "1997-06-30",
+                        "identifier": "BB12345",
+                        "score": 0
+                    },
+                    {
+                        "first_name": "A",
+                        "last_name": "L",
+                        "birthday": "1996-06-30",
+                        "identifier": "AB12345",
+                        "score": 0
+                    },
+                    {
+                        "first_name": "G",
+                        "last_name": "L",
+                        "birthday": "2002-06-30",
+                        "identifier": "GB12345",
+                        "score": 0
+                    }
+                ],
+                "matches": [
+                    [
+                        [
+                            {
+                                "first_name": "D",
+                                "last_name": "L",
+                                "birthday": "1999-06-30",
+                                "identifier": "DB12345",
+                                "score": 0
+                            },
+                            0
+                        ],
+                        [
+                            {
+                                "first_name": "A",
+                                "last_name": "L",
+                                "birthday": "1996-06-30",
+                                "identifier": "AB12345",
+                                "score": 0
+                            },
+                            0
+                        ]
+                    ],
+                    [
+                        [
+                            {
+                                "first_name": "C",
+                                "last_name": "L",
+                                "birthday": "1998-06-30",
+                                "identifier": "CB12345",
+                                "score": 0
+                            },
+                            0
+                        ],
+                        [
+                            {
+                                "first_name": "G",
+                                "last_name": "L",
+                                "birthday": "2002-06-30",
+                                "identifier": "GB12345",
+                                "score": 0
+                            },
+                            0
+                        ]
+                    ],
+                    [
+                        [
+                            {
+                                "first_name": "E",
+                                "last_name": "L",
+                                "birthday": "2000-06-30",
+                                "identifier": "EB12345",
+                                "score": 0
+                            },
+                            0
+                        ],
+                        [
+                            {
+                                "first_name": "F",
+                                "last_name": "L",
+                                "birthday": "2001-06-30",
+                                "identifier": "FL12345",
+                                "score": 0
+                            },
+                            0
+                        ]
+                    ],
+                    [
+                        [
+                            {
+                                "first_name": "B",
+                                "last_name": "L",
+                                "birthday": "1997-06-30",
+                                "identifier": "BB12345",
+                                "score": 0
+                            },
+                            0
+                        ],
+                        [
+                            {
+                                "first_name": "H",
+                                "last_name": "L",
+                                "birthday": "2003-06-30",
+                                "identifier": "HL12345",
+                                "score": 0
+                            },
+                            0
+                        ]
+                    ]
+                ]
+            },
+            {
+                "players": [
+                    {
+                        "first_name": "H",
+                        "last_name": "L",
+                        "birthday": "2003-06-30",
+                        "identifier": "HL12345",
+                        "score": 0
+                    },
+                    {
+                        "first_name": "E",
+                        "last_name": "L",
+                        "birthday": "2000-06-30",
+                        "identifier": "EB12345",
+                        "score": 0
+                    },
+                    {
+                        "first_name": "D",
+                        "last_name": "L",
+                        "birthday": "1999-06-30",
+                        "identifier": "DB12345",
+                        "score": 0
+                    },
+                    {
+                        "first_name": "F",
+                        "last_name": "L",
+                        "birthday": "2001-06-30",
+                        "identifier": "FL12345",
+                        "score": 0
+                    },
+                    {
+                        "first_name": "C",
+                        "last_name": "L",
+                        "birthday": "1998-06-30",
+                        "identifier": "CB12345",
+                        "score": 0
+                    },
+                    {
+                        "first_name": "B",
+                        "last_name": "L",
+                        "birthday": "1997-06-30",
+                        "identifier": "BB12345",
+                        "score": 0
+                    },
+                    {
+                        "first_name": "A",
+                        "last_name": "L",
+                        "birthday": "1996-06-30",
+                        "identifier": "AB12345",
+                        "score": 0
+                    },
+                    {
+                        "first_name": "G",
+                        "last_name": "L",
+                        "birthday": "2002-06-30",
+                        "identifier": "GB12345",
+                        "score": 0
+                    }
+                ],
+                "matches": [
+                    [
+                        [
+                            {
+                                "first_name": "E",
+                                "last_name": "L",
+                                "birthday": "2000-06-30",
+                                "identifier": "EB12345",
+                                "score": 0
+                            },
+                            0
+                        ],
+                        [
+                            {
+                                "first_name": "B",
+                                "last_name": "L",
+                                "birthday": "1997-06-30",
+                                "identifier": "BB12345",
+                                "score": 0
+                            },
+                            0
+                        ]
+                    ],
+                    [
+                        [
+                            {
+                                "first_name": "H",
+                                "last_name": "L",
+                                "birthday": "2003-06-30",
+                                "identifier": "HL12345",
+                                "score": 0
+                            },
+                            0
+                        ],
+                        [
+                            {
+                                "first_name": "C",
+                                "last_name": "L",
+                                "birthday": "1998-06-30",
+                                "identifier": "CB12345",
+                                "score": 0
+                            },
+                            0
+                        ]
+                    ],
+                    [
+                        [
+                            {
+                                "first_name": "G",
+                                "last_name": "L",
+                                "birthday": "2002-06-30",
+                                "identifier": "GB12345",
+                                "score": 0
+                            },
+                            0
+                        ],
+                        [
+                            {
+                                "first_name": "A",
+                                "last_name": "L",
+                                "birthday": "1996-06-30",
+                                "identifier": "AB12345",
+                                "score": 0
+                            },
+                            0
+                        ]
+                    ],
+                    [
+                        [
+                            {
+                                "first_name": "D",
+                                "last_name": "L",
+                                "birthday": "1999-06-30",
+                                "identifier": "DB12345",
+                                "score": 0
+                            },
+                            0
+                        ],
+                        [
+                            {
+                                "first_name": "F",
+                                "last_name": "L",
+                                "birthday": "2001-06-30",
+                                "identifier": "FL12345",
+                                "score": 0
+                            },
+                            0
+                        ]
+                    ]
+                ]
+            },
+            {
+                "players": [
+                    {
+                        "first_name": "H",
+                        "last_name": "L",
+                        "birthday": "2003-06-30",
+                        "identifier": "HL12345",
+                        "score": 0
+                    },
+                    {
+                        "first_name": "E",
+                        "last_name": "L",
+                        "birthday": "2000-06-30",
+                        "identifier": "EB12345",
+                        "score": 0
+                    },
+                    {
+                        "first_name": "D",
+                        "last_name": "L",
+                        "birthday": "1999-06-30",
+                        "identifier": "DB12345",
+                        "score": 0
+                    },
+                    {
+                        "first_name": "F",
+                        "last_name": "L",
+                        "birthday": "2001-06-30",
+                        "identifier": "FL12345",
+                        "score": 0
+                    },
+                    {
+                        "first_name": "C",
+                        "last_name": "L",
+                        "birthday": "1998-06-30",
+                        "identifier": "CB12345",
+                        "score": 0
+                    },
+                    {
+                        "first_name": "B",
+                        "last_name": "L",
+                        "birthday": "1997-06-30",
+                        "identifier": "BB12345",
+                        "score": 0
+                    },
+                    {
+                        "first_name": "A",
+                        "last_name": "L",
+                        "birthday": "1996-06-30",
+                        "identifier": "AB12345",
+                        "score": 0
+                    },
+                    {
+                        "first_name": "G",
+                        "last_name": "L",
+                        "birthday": "2002-06-30",
+                        "identifier": "GB12345",
+                        "score": 0
+                    }
+                ],
+                "matches": [
+                    [
+                        [
+                            {
+                                "first_name": "H",
+                                "last_name": "L",
+                                "birthday": "2003-06-30",
+                                "identifier": "HL12345",
+                                "score": 0
+                            },
+                            0
+                        ],
+                        [
+                            {
+                                "first_name": "E",
+                                "last_name": "L",
+                                "birthday": "2000-06-30",
+                                "identifier": "EB12345",
+                                "score": 0
+                            },
+                            0
+                        ]
+                    ],
+                    [
+                        [
+                            {
+                                "first_name": "D",
+                                "last_name": "L",
+                                "birthday": "1999-06-30",
+                                "identifier": "DB12345",
+                                "score": 0
+                            },
+                            0
+                        ],
+                        [
+                            {
+                                "first_name": "F",
+                                "last_name": "L",
+                                "birthday": "2001-06-30",
+                                "identifier": "FL12345",
+                                "score": 0
+                            },
+                            0
+                        ]
+                    ],
+                    [
+                        [
+                            {
+                                "first_name": "C",
+                                "last_name": "L",
+                                "birthday": "1998-06-30",
+                                "identifier": "CB12345",
+                                "score": 0
+                            },
+                            0
+                        ],
+                        [
+                            {
+                                "first_name": "B",
+                                "last_name": "L",
+                                "birthday": "1997-06-30",
+                                "identifier": "BB12345",
+                                "score": 0
+                            },
+                            0
+                        ]
+                    ],
+                    [
+                        [
+                            {
+                                "first_name": "A",
+                                "last_name": "L",
+                                "birthday": "1996-06-30",
+                                "identifier": "AB12345",
+                                "score": 0
+                            },
+                            0
+                        ],
+                        [
+                            {
+                                "first_name": "G",
+                                "last_name": "L",
+                                "birthday": "2002-06-30",
+                                "identifier": "GB12345",
+                                "score": 0
+                            },
+                            0
+                        ]
+                    ]
+                ]
+            }
+        ],
+        "nb_rounds": 4,
+        "desc": "blblbl"
+    }
+]
