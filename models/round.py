@@ -2,10 +2,10 @@ from random import shuffle
 from models.player import Player
 
 class Round:
-    def __init__(self, players, **kwargs):
+    def __init__(self, players,matches =[], **kwargs):
         self.players = players[:]
         self.convert_players()
-        self.matches = kwargs.get('matches', None)
+        self.matches = matches
         self.convert_matches()
         if not self.matches:
              self.organize_matches()

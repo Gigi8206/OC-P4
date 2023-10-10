@@ -4,6 +4,7 @@ from models.tournament import Tournament
 from models.tournament import TournamentManager
 from views.tournament import TournamentView as View
 from views.view_main import MainMenuView
+from models.player import Player
 import json
 
 
@@ -36,7 +37,7 @@ class TournamentController():
         tournament = Tournament(
             name, location, date, players, nb_rounds=nb_rounds, desc=desc
         )
-        result = self.manager.add_tournament(tournament)
+        self.manager.add_tournament(tournament)
         return "main menu"
 
     def load_tournament(self):
@@ -51,24 +52,28 @@ class TournamentController():
         print(f"Welcome to {tournament.name}")
 
         # TODO: Continuer de charger le tournoi
-        self.loop_rounds(tournament)
+        self.loop_round(tournament)
 
     def loop_round(self, tournament):
-        while tournament.current_round < tournament.nb_rounds:
-            result = self.view.input_ask_next_round(tournament.current_round)
+
+        while tournament.current_rounds < tournament.nb_rounds:
+            result = self.view.input_ask_next_round(tournament.current_rounds)
             while result not in ('yes', 'no'):
-                result = self.view.input_ask_next_round(tournament.current_round)
-            
+                result = self.view.input_ask_next_round(tournament.current_rounds)
             if result == 'no':
                 return
-            
-            for match in tournament.rounds[tournament.current_round].matches:
-                for player in match:
-                    score = input(f"Quel est le score du joueur { player.first_name } {player.last_name} ? ")
-                    player[1] = score
+        for match in tournament.rounds[tournament.current_rounds].matches:
+            first_name = Input.for_word("Please enter player's first name: ").capitalize()
+            last_name = Input.for_word("Please enter player's last name: ").capitalize()
+            for player in match:
+                score = input(f"Quel est le score du joueur {player.first_name} {player.last_name} ? ")
+                player = Player(first_name=first_name, last_name=last_name)
+                player[1] = score
 
-            tournament.current_round += 1
-            tournament.get_next_round()
+
+
+        tournament.current_round += 1
+        tournament.get_next_round()
 
 
     def create_list_players(self):

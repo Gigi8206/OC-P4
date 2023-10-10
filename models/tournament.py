@@ -7,14 +7,15 @@ import os
 import json
 
 class Tournament:
-    def __init__(self, players=[], rounds=[], nb_rounds=4, desc="", **kwargs):
-        self.desc = desc
-        self.name = kwargs.get('name')
-        self.place = kwargs.get('place')
-        self.date = kwargs.get('date')
-
-        self.current_round = 0
+    def __init__(self, name="", place=None, date=None,
+                 players=[], rounds=[], nb_rounds=4, desc=""):
+        self.name = name
+        self.place = place
+        self.date = date
+        self.players = players
         self.nb_rounds = nb_rounds
+        self.rounds = rounds
+        self.desc = desc
 
         self.players = players[:]
         self.convert_players()
