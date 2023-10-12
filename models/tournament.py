@@ -8,26 +8,31 @@ import json
 
 class Tournament:
     def __init__(self, name="", place=None, date=None,
-                 players=[], rounds=[], nb_rounds=4, desc=""):
+                 players=[], rounds=[], nb_rounds=4, desc="",
+                 current_round=0):
         self.name = name
         self.place = place
         self.date = date
-        self.players = players
+        self.convert_date()
         self.nb_rounds = nb_rounds
-        self.rounds = rounds
         self.desc = desc
+        self.current_round = current_round
 
         self.players = players[:]
         self.convert_players()
         self.rounds = rounds[:] # Passing by copy, not reference to avoid strange reference
         self.convert_rounds()
-        
+
         if not self.rounds:
             self.reset_scores()
             self.get_next_round()
         
     def __str__(self):
         return f"Tournoi: {self.name}"
+
+    def convert_date(self):
+        if type(self.date) == str:
+            parser.parse(self.date)
 
     def convert_players(self):
         for index, player in enumerate(self.players):
@@ -40,13 +45,16 @@ class Tournament:
                 self.rounds[index] = Round(**round)
 
     def tournament_to_json(self):
-       return {  "name": self.name,
+        print(self.date.isoformat())
+        return {
+            "name": self.name,
             "place": self.place,
             "date": self.date.isoformat(),
             "players": [player.to_json() for player in self.players],
             "rounds": [round.round_to_json() for round in self.rounds],
             "nb_rounds": self.nb_rounds,
             "desc": self.desc,
+            "current_round": self.current_round
         }
 
 
@@ -58,7 +66,6 @@ class Tournament:
         if len(self.rounds) < self.nb_rounds:
             self.rounds.append(Round(self.players))
 
-
 class TournamentManager:
     def __init__(self):
         self.tournaments = self.load_tournaments_from_file()
@@ -68,6 +75,9 @@ class TournamentManager:
             raise ValueError("add tournament")
 
         self.tournaments.append(tournament)
+        self.save_tournaments()
+    
+    def save_tournaments(self):
         with open("tournament.json", "w", encoding="utf-8") as tournament_file:
             dump(
                 [tournament.tournament_to_json() for tournament in self.tournaments],
