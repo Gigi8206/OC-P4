@@ -12,7 +12,7 @@ class TournamentView:
         return input("Name of an uncompleted tournament ? ")
 
     def input_ask_next_round(self, nb_round):
-        return (input(f"Do you want to launch round { nb_round } (yes/no) ?"))
+        return input(f"Do you want to launch round { nb_round } (yes / no) ? ")
 
     @staticmethod
     def show_tournaments_name_date(tournaments):

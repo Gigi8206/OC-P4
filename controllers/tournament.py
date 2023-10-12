@@ -55,25 +55,53 @@ class TournamentController():
         self.loop_round(tournament)
 
     def loop_round(self, tournament):
-
-        while tournament.current_rounds < tournament.nb_rounds:
-            result = self.view.input_ask_next_round(tournament.current_rounds)
+        while tournament.current_round < tournament.nb_rounds:
+            result = self.view.input_ask_next_round(tournament.current_round)
             while result not in ('yes', 'no'):
-                result = self.view.input_ask_next_round(tournament.current_rounds)
+                result = self.view.input_ask_next_round(tournament.current_round)
+
             if result == 'no':
                 return
-        for match in tournament.rounds[tournament.current_rounds].matches:
-            first_name = Input.for_word("Please enter player's first name: ").capitalize()
-            last_name = Input.for_word("Please enter player's last name: ").capitalize()
-            for player in match:
-                score = input(f"Quel est le score du joueur {player.first_name} {player.last_name} ? ")
-                player = Player(first_name=first_name, last_name=last_name)
-                player[1] = score
+                
+            for index, match in enumerate(tournament.rounds[tournament.current_round].matches):
+                print("Match {}: {} {} vs {} {}".format(
+                    index,
+                    match[0][0].first_name,
+                    match[0][0].last_name,
+                    match[1][0].first_name,
+                    match[1][0].last_name
+                ))
 
+                winner = -1
+                while winner not in range(3):
+                    winner = input(
+                        f"0: { match[0][0].first_name } { match[0][0].last_name }\n"
+                        f"1: { match[1][0].first_name } { match[1][0].last_name }\n"
+                        "2: Egalité\n"
+                        "Qui gagne ? "
+                    )
+                    try:
+                        winner = int(winner)
+                    except:
+                        print("L'option choisie n'est pas un nombre")
 
+                    if winner not in range(3):
+                        print("Option invalide")
+                
+                if winner == 0:
+                    match[0][1] += 1
+                    match[1][1] += 0
+                elif winner == 1:
+                    match[0][1] += 0
+                    match[1][1] += 1
+                else:
+                    match[0][1] += 0.5
+                    match[1][1] += 0.5
 
-        tournament.current_round += 1
-        tournament.get_next_round()
+            self.manager.save_tournaments()
+            tournament.get_next_round()
+            tournament.current_round += 1
+        print("Fin du tournoi ! Bravo à tous les participants")
 
 
     def create_list_players(self):
@@ -85,7 +113,11 @@ class TournamentController():
 
         players = []
         for index in range(8):
-            players_available = [player for player in self.player_manager.players if player not in players]
+            players_available = [
+                player
+                for player in self.player_manager.players
+                if player not in players
+            ]
             for index, player in enumerate(players_available):
                 print(f"{index}: {player}")
             numero = self.view.choose_user(index)
