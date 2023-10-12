@@ -5,7 +5,7 @@ from models.tournament import TournamentManager
 from views.tournament import TournamentView as View
 from views.view_main import MainMenuView
 from models.player import Player
-import json
+
 
 
 
@@ -69,8 +69,6 @@ class TournamentController():
                 score = input(f"Quel est le score du joueur {player.first_name} {player.last_name} ? ")
                 player = Player(first_name=first_name, last_name=last_name)
                 player[1] = score
-
-
 
         tournament.current_round += 1
         tournament.get_next_round()

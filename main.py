@@ -1,5 +1,5 @@
 from views.view_main import MainMenuView
-from controllers.main_menu import MainMenuController
+from controllers.main_menu import MainMenuControllergit
 
 
 
