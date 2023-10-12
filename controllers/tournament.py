@@ -5,8 +5,7 @@ from models.tournament import TournamentManager
 from views.tournament import TournamentView as View
 from views.view_main import MainMenuView
 from models.player import Player
-
-
+import json
 
 
 class TournamentController():
@@ -62,7 +61,7 @@ class TournamentController():
 
             if result == 'no':
                 return
-                
+
             for index, match in enumerate(tournament.rounds[tournament.current_round].matches):
                 print("Match {}: {} {} vs {} {}".format(
                     index,
@@ -72,15 +71,11 @@ class TournamentController():
                     match[1][0].last_name
                 ))
 
-<<<<<<< HEAD
-        tournament.current_round += 1
-        tournament.get_next_round()
-=======
                 winner = -1
                 while winner not in range(3):
                     winner = input(
-                        f"0: { match[0][0].first_name } { match[0][0].last_name }\n"
-                        f"1: { match[1][0].first_name } { match[1][0].last_name }\n"
+                        f"0: {match[0][0].first_name} {match[0][0].last_name}\n"
+                        f"1: {match[1][0].first_name} {match[1][0].last_name}\n"
                         "2: Egalité\n"
                         "Qui gagne ? "
                     )
@@ -91,7 +86,7 @@ class TournamentController():
 
                     if winner not in range(3):
                         print("Option invalide")
-                
+
                 if winner == 0:
                     match[0][1] += 1
                     match[1][1] += 0
@@ -106,8 +101,6 @@ class TournamentController():
             tournament.get_next_round()
             tournament.current_round += 1
         print("Fin du tournoi ! Bravo à tous les participants")
->>>>>>> 2e525aa3dda59cbfabbb0022fbfac72d5c58d4c1
-
 
     def create_list_players(self):
         """Create a list of 8 players from the database."""
@@ -129,5 +122,4 @@ class TournamentController():
             player = players_available[numero]
             players.append(player)
         return players
-
 
