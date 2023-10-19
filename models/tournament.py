@@ -45,7 +45,7 @@ class Tournament:
                 self.rounds[index] = Round(**round)
 
     def tournament_to_json(self):
-        print(self.date.isoformat())
+        # print(self.date.isoformat())
         return {
             "name": self.name,
             "place": self.place,

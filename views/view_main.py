@@ -85,6 +85,7 @@ class ReportMenuView:
     def input_error():
         print("\nInput error, please enter a valid option.")
 
+
 class MenuViews:
     @staticmethod
     def input_prompt_text(option):
@@ -93,8 +94,4 @@ class MenuViews:
     @staticmethod
     def input_prompt():
         print("\nType [option] and press Enter : ", end='')
-
-
-
-
 

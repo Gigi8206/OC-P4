@@ -1,8 +1,8 @@
 [
     {
-        "name": "Paris",
+        "name": "Grand Tournoi",
         "place": "Paris",
-        "date": "2023-10-12",
+        "date": "2023-10-19",
         "players": [
             {
                 "first_name": "Hadjer",
@@ -65,17 +65,10 @@
             {
                 "players": [
                     {
-                        "first_name": "Romeo",
-                        "last_name": "Cortes",
-                        "birthday": "2002-12-09",
-                        "identifier": "MM12345",
-                        "score": 0
-                    },
-                    {
-                        "first_name": "Imene",
-                        "last_name": "Benkara",
-                        "birthday": "2009-08-10",
-                        "identifier": "HH12345",
+                        "first_name": "Leyla",
+                        "last_name": "Beta",
+                        "birthday": "1984-06-20",
+                        "identifier": "AB35699",
                         "score": 0
                     },
                     {
@@ -83,6 +76,20 @@
                         "last_name": "Lebray",
                         "birthday": "1996-03-30",
                         "identifier": "AB00234",
+                        "score": 0
+                    },
+                    {
+                        "first_name": "Romeo",
+                        "last_name": "Cortes",
+                        "birthday": "2002-12-09",
+                        "identifier": "MM12345",
+                        "score": 0
+                    },
+                    {
+                        "first_name": "Hadjer",
+                        "last_name": "Attatba",
+                        "birthday": "1982-09-28",
+                        "identifier": "AB12345",
                         "score": 0
                     },
                     {
@@ -107,21 +114,36 @@
                         "score": 0
                     },
                     {
-                        "first_name": "Hadjer",
-                        "last_name": "Attatba",
-                        "birthday": "1982-09-28",
-                        "identifier": "AB12345",
-                        "score": 0
-                    },
-                    {
-                        "first_name": "Leyla",
-                        "last_name": "Beta",
-                        "birthday": "1984-06-20",
-                        "identifier": "AB35699",
+                        "first_name": "Imene",
+                        "last_name": "Benkara",
+                        "birthday": "2009-08-10",
+                        "identifier": "HH12345",
                         "score": 0
                     }
                 ],
                 "matches": [
+                    [
+                        [
+                            {
+                                "first_name": "Leyla",
+                                "last_name": "Beta",
+                                "birthday": "1984-06-20",
+                                "identifier": "AB35699",
+                                "score": 0
+                            },
+                            1
+                        ],
+                        [
+                            {
+                                "first_name": "Aurelien",
+                                "last_name": "Lebray",
+                                "birthday": "1996-03-30",
+                                "identifier": "AB00234",
+                                "score": 0
+                            },
+                            0
+                        ]
+                    ],
                     [
                         [
                             {
@@ -135,26 +157,16 @@
                         ],
                         [
                             {
-                                "first_name": "Imene",
-                                "last_name": "Benkara",
-                                "birthday": "2009-08-10",
-                                "identifier": "HH12345",
+                                "first_name": "Hadjer",
+                                "last_name": "Attatba",
+                                "birthday": "1982-09-28",
+                                "identifier": "AB12345",
                                 "score": 0
                             },
                             0
                         ]
                     ],
                     [
-                        [
-                            {
-                                "first_name": "Aurelien",
-                                "last_name": "Lebray",
-                                "birthday": "1996-03-30",
-                                "identifier": "AB00234",
-                                "score": 0
-                            },
-                            0
-                        ],
                         [
                             {
                                 "first_name": "Romane",
@@ -163,10 +175,8 @@
                                 "identifier": "CC12345",
                                 "score": 0
                             },
-                            1
-                        ]
-                    ],
-                    [
+                            0
+                        ],
                         [
                             {
                                 "first_name": "Amine",
@@ -175,8 +185,10 @@
                                 "identifier": "DD12345",
                                 "score": 0
                             },
-                            0
-                        ],
+                            1
+                        ]
+                    ],
+                    [
                         [
                             {
                                 "first_name": "Beryl",
@@ -185,29 +197,17 @@
                                 "identifier": "AA12345",
                                 "score": 0
                             },
-                            1
-                        ]
-                    ],
-                    [
-                        [
-                            {
-                                "first_name": "Hadjer",
-                                "last_name": "Attatba",
-                                "birthday": "1982-09-28",
-                                "identifier": "AB12345",
-                                "score": 0
-                            },
-                            1
+                            0
                         ],
                         [
                             {
-                                "first_name": "Leyla",
-                                "last_name": "Beta",
-                                "birthday": "1984-06-20",
-                                "identifier": "AB35699",
+                                "first_name": "Imene",
+                                "last_name": "Benkara",
+                                "birthday": "2009-08-10",
+                                "identifier": "HH12345",
                                 "score": 0
                             },
-                            0
+                            1
                         ]
                     ]
                 ]
@@ -215,24 +215,10 @@
             {
                 "players": [
                     {
-                        "first_name": "Romane",
-                        "last_name": "Jourde",
-                        "birthday": "2000-09-06",
-                        "identifier": "CC12345",
-                        "score": 0
-                    },
-                    {
-                        "first_name": "Imene",
-                        "last_name": "Benkara",
-                        "birthday": "2009-08-10",
-                        "identifier": "HH12345",
-                        "score": 0
-                    },
-                    {
-                        "first_name": "Romeo",
-                        "last_name": "Cortes",
-                        "birthday": "2002-12-09",
-                        "identifier": "MM12345",
+                        "first_name": "Leyla",
+                        "last_name": "Beta",
+                        "birthday": "1984-06-20",
+                        "identifier": "AB35699",
                         "score": 0
                     },
                     {
@@ -257,10 +243,10 @@
                         "score": 0
                     },
                     {
-                        "first_name": "Leyla",
-                        "last_name": "Beta",
-                        "birthday": "1984-06-20",
-                        "identifier": "AB35699",
+                        "first_name": "Romane",
+                        "last_name": "Jourde",
+                        "birthday": "2000-09-06",
+                        "identifier": "CC12345",
                         "score": 0
                     },
                     {
@@ -269,38 +255,30 @@
                         "birthday": "1981-03-26",
                         "identifier": "AA12345",
                         "score": 0
+                    },
+                    {
+                        "first_name": "Imene",
+                        "last_name": "Benkara",
+                        "birthday": "2009-08-10",
+                        "identifier": "HH12345",
+                        "score": 0
+                    },
+                    {
+                        "first_name": "Romeo",
+                        "last_name": "Cortes",
+                        "birthday": "2002-12-09",
+                        "identifier": "MM12345",
+                        "score": 0
                     }
                 ],
                 "matches": [
                     [
                         [
                             {
-                                "first_name": "Romane",
-                                "last_name": "Jourde",
-                                "birthday": "2000-09-06",
-                                "identifier": "CC12345",
-                                "score": 0
-                            },
-                            0.5
-                        ],
-                        [
-                            {
-                                "first_name": "Imene",
-                                "last_name": "Benkara",
-                                "birthday": "2009-08-10",
-                                "identifier": "HH12345",
-                                "score": 0
-                            },
-                            0.5
-                        ]
-                    ],
-                    [
-                        [
-                            {
-                                "first_name": "Romeo",
-                                "last_name": "Cortes",
-                                "birthday": "2002-12-09",
-                                "identifier": "MM12345",
+                                "first_name": "Leyla",
+                                "last_name": "Beta",
+                                "birthday": "1984-06-20",
+                                "identifier": "AB35699",
                                 "score": 0
                             },
                             0
@@ -325,7 +303,7 @@
                                 "identifier": "DD12345",
                                 "score": 0
                             },
-                            0
+                            0.5
                         ],
                         [
                             {
@@ -333,6 +311,328 @@
                                 "last_name": "Lebray",
                                 "birthday": "1996-03-30",
                                 "identifier": "AB00234",
+                                "score": 0
+                            },
+                            0.5
+                        ]
+                    ],
+                    [
+                        [
+                            {
+                                "first_name": "Romane",
+                                "last_name": "Jourde",
+                                "birthday": "2000-09-06",
+                                "identifier": "CC12345",
+                                "score": 0
+                            },
+                            0
+                        ],
+                        [
+                            {
+                                "first_name": "Beryl",
+                                "last_name": "Steel",
+                                "birthday": "1981-03-26",
+                                "identifier": "AA12345",
+                                "score": 0
+                            },
+                            1
+                        ]
+                    ],
+                    [
+                        [
+                            {
+                                "first_name": "Imene",
+                                "last_name": "Benkara",
+                                "birthday": "2009-08-10",
+                                "identifier": "HH12345",
+                                "score": 0
+                            },
+                            0
+                        ],
+                        [
+                            {
+                                "first_name": "Romeo",
+                                "last_name": "Cortes",
+                                "birthday": "2002-12-09",
+                                "identifier": "MM12345",
+                                "score": 0
+                            },
+                            1
+                        ]
+                    ]
+                ]
+            },
+            {
+                "players": [
+                    {
+                        "first_name": "Leyla",
+                        "last_name": "Beta",
+                        "birthday": "1984-06-20",
+                        "identifier": "AB35699",
+                        "score": 0
+                    },
+                    {
+                        "first_name": "Romane",
+                        "last_name": "Jourde",
+                        "birthday": "2000-09-06",
+                        "identifier": "CC12345",
+                        "score": 0
+                    },
+                    {
+                        "first_name": "Amine",
+                        "last_name": "Benkara",
+                        "birthday": "2015-03-06",
+                        "identifier": "DD12345",
+                        "score": 0
+                    },
+                    {
+                        "first_name": "Romeo",
+                        "last_name": "Cortes",
+                        "birthday": "2002-12-09",
+                        "identifier": "MM12345",
+                        "score": 0
+                    },
+                    {
+                        "first_name": "Aurelien",
+                        "last_name": "Lebray",
+                        "birthday": "1996-03-30",
+                        "identifier": "AB00234",
+                        "score": 0
+                    },
+                    {
+                        "first_name": "Imene",
+                        "last_name": "Benkara",
+                        "birthday": "2009-08-10",
+                        "identifier": "HH12345",
+                        "score": 0
+                    },
+                    {
+                        "first_name": "Beryl",
+                        "last_name": "Steel",
+                        "birthday": "1981-03-26",
+                        "identifier": "AA12345",
+                        "score": 0
+                    },
+                    {
+                        "first_name": "Hadjer",
+                        "last_name": "Attatba",
+                        "birthday": "1982-09-28",
+                        "identifier": "AB12345",
+                        "score": 0
+                    }
+                ],
+                "matches": [
+                    [
+                        [
+                            {
+                                "first_name": "Leyla",
+                                "last_name": "Beta",
+                                "birthday": "1984-06-20",
+                                "identifier": "AB35699",
+                                "score": 0
+                            },
+                            0.5
+                        ],
+                        [
+                            {
+                                "first_name": "Romane",
+                                "last_name": "Jourde",
+                                "birthday": "2000-09-06",
+                                "identifier": "CC12345",
+                                "score": 0
+                            },
+                            0.5
+                        ]
+                    ],
+                    [
+                        [
+                            {
+                                "first_name": "Amine",
+                                "last_name": "Benkara",
+                                "birthday": "2015-03-06",
+                                "identifier": "DD12345",
+                                "score": 0
+                            },
+                            1
+                        ],
+                        [
+                            {
+                                "first_name": "Romeo",
+                                "last_name": "Cortes",
+                                "birthday": "2002-12-09",
+                                "identifier": "MM12345",
+                                "score": 0
+                            },
+                            0
+                        ]
+                    ],
+                    [
+                        [
+                            {
+                                "first_name": "Aurelien",
+                                "last_name": "Lebray",
+                                "birthday": "1996-03-30",
+                                "identifier": "AB00234",
+                                "score": 0
+                            },
+                            0
+                        ],
+                        [
+                            {
+                                "first_name": "Imene",
+                                "last_name": "Benkara",
+                                "birthday": "2009-08-10",
+                                "identifier": "HH12345",
+                                "score": 0
+                            },
+                            1
+                        ]
+                    ],
+                    [
+                        [
+                            {
+                                "first_name": "Beryl",
+                                "last_name": "Steel",
+                                "birthday": "1981-03-26",
+                                "identifier": "AA12345",
+                                "score": 0
+                            },
+                            0
+                        ],
+                        [
+                            {
+                                "first_name": "Hadjer",
+                                "last_name": "Attatba",
+                                "birthday": "1982-09-28",
+                                "identifier": "AB12345",
+                                "score": 0
+                            },
+                            1
+                        ]
+                    ]
+                ]
+            },
+            {
+                "players": [
+                    {
+                        "first_name": "Imene",
+                        "last_name": "Benkara",
+                        "birthday": "2009-08-10",
+                        "identifier": "HH12345",
+                        "score": 0
+                    },
+                    {
+                        "first_name": "Romane",
+                        "last_name": "Jourde",
+                        "birthday": "2000-09-06",
+                        "identifier": "CC12345",
+                        "score": 0
+                    },
+                    {
+                        "first_name": "Hadjer",
+                        "last_name": "Attatba",
+                        "birthday": "1982-09-28",
+                        "identifier": "AB12345",
+                        "score": 0
+                    },
+                    {
+                        "first_name": "Beryl",
+                        "last_name": "Steel",
+                        "birthday": "1981-03-26",
+                        "identifier": "AA12345",
+                        "score": 0
+                    },
+                    {
+                        "first_name": "Aurelien",
+                        "last_name": "Lebray",
+                        "birthday": "1996-03-30",
+                        "identifier": "AB00234",
+                        "score": 0
+                    },
+                    {
+                        "first_name": "Romeo",
+                        "last_name": "Cortes",
+                        "birthday": "2002-12-09",
+                        "identifier": "MM12345",
+                        "score": 0
+                    },
+                    {
+                        "first_name": "Leyla",
+                        "last_name": "Beta",
+                        "birthday": "1984-06-20",
+                        "identifier": "AB35699",
+                        "score": 0
+                    },
+                    {
+                        "first_name": "Amine",
+                        "last_name": "Benkara",
+                        "birthday": "2015-03-06",
+                        "identifier": "DD12345",
+                        "score": 0
+                    }
+                ],
+                "matches": [
+                    [
+                        [
+                            {
+                                "first_name": "Imene",
+                                "last_name": "Benkara",
+                                "birthday": "2009-08-10",
+                                "identifier": "HH12345",
+                                "score": 0
+                            },
+                            1
+                        ],
+                        [
+                            {
+                                "first_name": "Romane",
+                                "last_name": "Jourde",
+                                "birthday": "2000-09-06",
+                                "identifier": "CC12345",
+                                "score": 0
+                            },
+                            0
+                        ]
+                    ],
+                    [
+                        [
+                            {
+                                "first_name": "Hadjer",
+                                "last_name": "Attatba",
+                                "birthday": "1982-09-28",
+                                "identifier": "AB12345",
+                                "score": 0
+                            },
+                            0
+                        ],
+                        [
+                            {
+                                "first_name": "Beryl",
+                                "last_name": "Steel",
+                                "birthday": "1981-03-26",
+                                "identifier": "AA12345",
+                                "score": 0
+                            },
+                            1
+                        ]
+                    ],
+                    [
+                        [
+                            {
+                                "first_name": "Aurelien",
+                                "last_name": "Lebray",
+                                "birthday": "1996-03-30",
+                                "identifier": "AB00234",
+                                "score": 0
+                            },
+                            0
+                        ],
+                        [
+                            {
+                                "first_name": "Romeo",
+                                "last_name": "Cortes",
+                                "birthday": "2002-12-09",
+                                "identifier": "MM12345",
                                 "score": 0
                             },
                             1
@@ -347,8 +647,150 @@
                                 "identifier": "AB35699",
                                 "score": 0
                             },
-                            0.5
+                            0
                         ],
+                        [
+                            {
+                                "first_name": "Amine",
+                                "last_name": "Benkara",
+                                "birthday": "2015-03-06",
+                                "identifier": "DD12345",
+                                "score": 0
+                            },
+                            1
+                        ]
+                    ]
+                ]
+            }
+        ],
+        "nb_rounds": 4,
+        "desc": "New Chess Tournament challenge in Paris",
+        "current_round": 3
+    },
+    {
+        "name": "Paris",
+        "place": "PARIS",
+        "date": "2023-10-19",
+        "players": [
+            {
+                "first_name": "Aurelien",
+                "last_name": "Lebray",
+                "birthday": "1996-03-30",
+                "identifier": "AB00234",
+                "score": 0
+            },
+            {
+                "first_name": "Leyla",
+                "last_name": "Beta",
+                "birthday": "1984-06-20",
+                "identifier": "AB35699",
+                "score": 0
+            },
+            {
+                "first_name": "Romane",
+                "last_name": "Jourde",
+                "birthday": "2000-09-06",
+                "identifier": "CC12345",
+                "score": 0
+            },
+            {
+                "first_name": "Beryl",
+                "last_name": "Steel",
+                "birthday": "1981-03-26",
+                "identifier": "AA12345",
+                "score": 0
+            },
+            {
+                "first_name": "Amine",
+                "last_name": "Benkara",
+                "birthday": "2015-03-06",
+                "identifier": "DD12345",
+                "score": 0
+            },
+            {
+                "first_name": "Imene",
+                "last_name": "Benkara",
+                "birthday": "2009-08-10",
+                "identifier": "HH12345",
+                "score": 0
+            },
+            {
+                "first_name": "Romeo",
+                "last_name": "Cortes",
+                "birthday": "2002-12-09",
+                "identifier": "MM12345",
+                "score": 0
+            },
+            {
+                "first_name": "Sarah",
+                "last_name": "Stone",
+                "birthday": "2001-04-12",
+                "identifier": "KK12345",
+                "score": 0
+            }
+        ],
+        "rounds": [
+            {
+                "players": [
+                    {
+                        "first_name": "Beryl",
+                        "last_name": "Steel",
+                        "birthday": "1981-03-26",
+                        "identifier": "AA12345",
+                        "score": 0
+                    },
+                    {
+                        "first_name": "Romeo",
+                        "last_name": "Cortes",
+                        "birthday": "2002-12-09",
+                        "identifier": "MM12345",
+                        "score": 0
+                    },
+                    {
+                        "first_name": "Romane",
+                        "last_name": "Jourde",
+                        "birthday": "2000-09-06",
+                        "identifier": "CC12345",
+                        "score": 0
+                    },
+                    {
+                        "first_name": "Leyla",
+                        "last_name": "Beta",
+                        "birthday": "1984-06-20",
+                        "identifier": "AB35699",
+                        "score": 0
+                    },
+                    {
+                        "first_name": "Imene",
+                        "last_name": "Benkara",
+                        "birthday": "2009-08-10",
+                        "identifier": "HH12345",
+                        "score": 0
+                    },
+                    {
+                        "first_name": "Aurelien",
+                        "last_name": "Lebray",
+                        "birthday": "1996-03-30",
+                        "identifier": "AB00234",
+                        "score": 0
+                    },
+                    {
+                        "first_name": "Sarah",
+                        "last_name": "Stone",
+                        "birthday": "2001-04-12",
+                        "identifier": "KK12345",
+                        "score": 0
+                    },
+                    {
+                        "first_name": "Amine",
+                        "last_name": "Benkara",
+                        "birthday": "2015-03-06",
+                        "identifier": "DD12345",
+                        "score": 0
+                    }
+                ],
+                "matches": [
+                    [
                         [
                             {
                                 "first_name": "Beryl",
@@ -357,14 +799,90 @@
                                 "identifier": "AA12345",
                                 "score": 0
                             },
-                            0.5
+                            0
+                        ],
+                        [
+                            {
+                                "first_name": "Romeo",
+                                "last_name": "Cortes",
+                                "birthday": "2002-12-09",
+                                "identifier": "MM12345",
+                                "score": 0
+                            },
+                            0
+                        ]
+                    ],
+                    [
+                        [
+                            {
+                                "first_name": "Romane",
+                                "last_name": "Jourde",
+                                "birthday": "2000-09-06",
+                                "identifier": "CC12345",
+                                "score": 0
+                            },
+                            0
+                        ],
+                        [
+                            {
+                                "first_name": "Leyla",
+                                "last_name": "Beta",
+                                "birthday": "1984-06-20",
+                                "identifier": "AB35699",
+                                "score": 0
+                            },
+                            0
+                        ]
+                    ],
+                    [
+                        [
+                            {
+                                "first_name": "Imene",
+                                "last_name": "Benkara",
+                                "birthday": "2009-08-10",
+                                "identifier": "HH12345",
+                                "score": 0
+                            },
+                            0
+                        ],
+                        [
+                            {
+                                "first_name": "Aurelien",
+                                "last_name": "Lebray",
+                                "birthday": "1996-03-30",
+                                "identifier": "AB00234",
+                                "score": 0
+                            },
+                            0
+                        ]
+                    ],
+                    [
+                        [
+                            {
+                                "first_name": "Sarah",
+                                "last_name": "Stone",
+                                "birthday": "2001-04-12",
+                                "identifier": "KK12345",
+                                "score": 0
+                            },
+                            0
+                        ],
+                        [
+                            {
+                                "first_name": "Amine",
+                                "last_name": "Benkara",
+                                "birthday": "2015-03-06",
+                                "identifier": "DD12345",
+                                "score": 0
+                            },
+                            0
                         ]
                     ]
                 ]
             }
         ],
         "nb_rounds": 4,
-        "desc": "desc",
-        "current_round": 1
+        "desc": "Second challenge in Paris",
+        "current_round": 0
     }
 ]
