@@ -1,6 +1,7 @@
-from json import dump, load
+from json import load
 from dateutil import parser
 import json
+
 
 class Player:
     def __init__(self, **kwargs):
@@ -15,7 +16,7 @@ class Player:
         return f"{self.first_name} {self.last_name}: {self.identifier} - {self.birthday.isoformat()} - {self.score}"
 
     def convert_birthday(self):
-        if type(self.birthday) == str:
+        if type(self.birthday) is str:
             self.birthday = parser.parse(self.birthday).date()
 
     def to_json(self):
@@ -24,7 +25,7 @@ class Player:
             "last_name": self.last_name,
             "birthday": self.birthday.isoformat(),
             "identifier": self.identifier,
-            "score": self.score
+            "score": self.score,
         }
 
 
@@ -35,7 +36,7 @@ class PlayerManager:
     def load_players(self):
         # Deserialization from json
         try:
-            with open('players.json', 'r', encoding="utf-8") as player_file:
+            with open("players.json", "r", encoding="utf-8") as player_file:
                 players = load(player_file)
                 return [Player(**player_dict) for player_dict in players]
         except FileNotFoundError:
@@ -47,12 +48,11 @@ class PlayerManager:
             raise ValueError("Add player should take a player")
 
         self.players.append(player)
-        with open('players.json', 'w', encoding="utf-8") as player_file:
+        with open("players.json", "w", encoding="utf-8") as player_file:
             json.dump(
                 [player.to_json() for player in self.players],
                 player_file,
-                ensure_ascii=False, indent=4
+                ensure_ascii=False,
+                indent=4,
             )
         return player
-
-

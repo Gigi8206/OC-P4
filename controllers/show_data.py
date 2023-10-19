@@ -1,10 +1,8 @@
 from views.view_main import ReportMenuView
-from models.player import PlayerManager
 from views.tournament import TournamentView
-import json
 
 
-class ReportsMenuOptions():
+class ReportsMenuOptions:
     ALL_PLAYERS = 0
     TOURNAMENT_LIST = 1
     TOURNAMENT_DATE_NAME = 2
@@ -19,7 +17,6 @@ class ShowDataController:
         self.tournament_manager = tournament_manager
         self.view = ReportMenuView()
 
-
     def start_loop(self):
         option_selected = None
         while option_selected != ReportsMenuOptions.EXIT:
@@ -27,11 +24,17 @@ class ShowDataController:
             if option_selected == ReportsMenuOptions.ALL_PLAYERS:
                 ReportMenuView.display_all_players(self.player_manager.players)
             if option_selected == ReportsMenuOptions.TOURNAMENT_LIST:
-                ReportMenuView.show_tournaments_list(self.tournament_manager.tournaments)
+                ReportMenuView.show_tournaments_list(
+                    self.tournament_manager.tournaments
+                )
             if option_selected == ReportsMenuOptions.TOURNAMENT_DATE_NAME:
-                ReportMenuView.show_tournaments_name_date(self.tournament_manager.tournaments)
+                ReportMenuView.show_tournaments_name_date(
+                    self.tournament_manager.tournaments
+                )
             if option_selected == ReportsMenuOptions.TOURNAMENT_PLAYERS:
-                ReportMenuView.display_tournament_players(self.tournament_manager.tournaments)
+                ReportMenuView.display_tournament_players(
+                    self.tournament_manager.tournaments
+                )
             if option_selected == ReportsMenuOptions.TOURNAMENT_ROUNDS_MATCHES:
                 tournament_name = TournamentView.input_tournament_name()
                 for tournament in self.tournament_manager.tournaments:
@@ -45,8 +48,5 @@ class ShowDataController:
     @staticmethod
     def back_to_menu():
         from controllers.main_menu import MainMenuController
+
         MainMenuController.start_loop()
-
-
-
-

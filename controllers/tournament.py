@@ -4,11 +4,9 @@ from models.tournament import Tournament
 from models.tournament import TournamentManager
 from views.tournament import TournamentView as View
 from views.view_main import MainMenuView
-from models.player import Player
-import json
 
 
-class TournamentController():
+class TournamentController:
     """Create a new tournament controller."""
 
     def __init__(self, player_manager):
@@ -56,20 +54,24 @@ class TournamentController():
     def loop_round(self, tournament):
         while tournament.current_round < tournament.nb_rounds:
             result = self.view.input_ask_next_round(tournament.current_round)
-            while result not in ('yes', 'no'):
+            while result not in ("yes", "no"):
                 result = self.view.input_ask_next_round(tournament.current_round)
 
-            if result == 'no':
+            if result == "no":
                 return
 
-            for index, match in enumerate(tournament.rounds[tournament.current_round].matches):
-                print("Match {}: {} {} vs {} {}".format(
-                    index,
-                    match[0][0].first_name,
-                    match[0][0].last_name,
-                    match[1][0].first_name,
-                    match[1][0].last_name
-                ))
+            for index, match in enumerate(
+                tournament.rounds[tournament.current_round].matches
+            ):
+                print(
+                    "Match {}: {} {} vs {} {}".format(
+                        index,
+                        match[0][0].first_name,
+                        match[0][0].last_name,
+                        match[1][0].first_name,
+                        match[1][0].last_name,
+                    )
+                )
 
                 winner = -1
                 while winner not in range(3):
@@ -81,20 +83,22 @@ class TournamentController():
                     )
                     try:
                         winner = int(winner)
-                    except:
+                    except ValueError:
                         print("L'option choisie n'est pas un nombre")
 
                     if winner not in range(3):
                         print("Option invalide")
 
                 if winner == 0:
+                    match[0][0].score += 1
                     match[0][1] += 1
-                    match[1][1] += 0
                 elif winner == 1:
-                    match[0][1] += 0
+                    match[1][0].score += 1
                     match[1][1] += 1
                 else:
+                    match[0][0].score += 0.5
                     match[0][1] += 0.5
+                    match[1][0].score += 0.5
                     match[1][1] += 0.5
 
             self.manager.save_tournaments()
@@ -122,4 +126,3 @@ class TournamentController():
             player = players_available[numero]
             players.append(player)
         return players
-

@@ -1,7 +1,7 @@
 from controllers.input import Input
 
-class TournamentView:
 
+class TournamentView:
     @staticmethod
     def input_tournament_name():
         tournament_name = input("Enter tournament's name: ")
@@ -24,20 +24,20 @@ class TournamentView:
     @staticmethod
     def tournament_menu(self):
         return input(
-            ("Menu tournoi : Tapez le numéro de votre choix : \n"
-             "1 - Créer un nouveau tournoi \n"
-             "2 - Récupérer tournoi existant \n"
-             "3 - Supprimer les tournois \n"
-             "4 - Retour au menu principal \n")
+            (
+                "Menu tournoi : Tapez le numéro de votre choix : \n"
+                "1 - Créer un nouveau tournoi \n"
+                "2 - Récupérer tournoi existant \n"
+                "3 - Supprimer les tournois \n"
+                "4 - Retour au menu principal \n"
+            )
         )
 
     def choose_user(self, index):
         "Choose a player from the database to play in a tournament."
-        message = f"Select your player: "
+        message = "Select your player: "
         numero = Input.for_integer(message)
         return numero
 
     def display_tournament_not_found(self):
         print("Error: Tournament not found")
-
-

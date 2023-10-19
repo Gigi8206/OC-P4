@@ -1,5 +1,5 @@
-
 from datetime import datetime
+
 
 class Input:
     """Help class for input function."""
@@ -49,14 +49,14 @@ class Input:
     def birthday(cls, message):
         birthday = input(message)
         try:
-            birthday_converted = datetime.strptime(birthday, '%d/%m/%Y')
+            birthday_converted = datetime.strptime(birthday, "%d/%m/%Y")
         except ValueError:
             raise ValueError("Incorrect data format, should be YYYY-MM-DD")
         return birthday_converted
 
     @classmethod
-    def for_identifier (cls, message):
-        """ check if the identifier format is correct """
+    def for_identifier(cls, message):
+        """check if the identifier format is correct"""
         value = input(message)
         if len(value) != 7:
             print("length error it has to be equal to 7")
@@ -64,4 +64,3 @@ class Input:
             print("Incorrect identifier please respect the format! ")
         else:
             return value
-

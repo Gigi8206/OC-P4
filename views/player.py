@@ -1,6 +1,5 @@
 class CreatePlayer:
     def display_menu(self):
-
         last_name = input("""Nom du joueur:\n> """)
 
         first_name = input("""Prénom du joueur:\n> """)
@@ -8,7 +7,7 @@ class CreatePlayer:
         birthday = self.get_user_entry(
             msg_display="Date de naissance (format DD-MM-YYYY):\n> ",
             msg_error="Veuillez entrer une date au format valide: DD-MM-YYYY",
-            value_type="date"
+            value_type="date",
         )
         print(f"Joueur {first_name} {last_name} créé.")
 
