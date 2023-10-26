@@ -1,3 +1,5 @@
+
+
 class MainMenuView:
     @staticmethod
     def app_title():
@@ -18,6 +20,7 @@ class MainMenuView:
 
 
 class ReportMenuView:
+
     def select_report(self):
         return input(
             "Please choose an option to continue:\n"
@@ -32,6 +35,7 @@ class ReportMenuView:
 
     @staticmethod
     def display_all_players(players):
+
         print("**********************")
         print("All players by name : ")
         print("**********************")
