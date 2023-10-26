@@ -47,3 +47,17 @@ git clone https://github.com/Gigi8206/OC-P4.git)
 ```
 pip install -r requirements.txt
 ```
+Comment vérifier la syntaxe PEP8 du projet ?
+Create flake8-html report
+
+python -m flake8 --format=html --htmldir=flake8_rapport/
+
+Comment fonctionne l'application ?
+Elle est prévue en mode "terminal /console" par défaut.
+
+Initialement le projet sera vide. Au moins 1 club devra être crée pour enregistrer 1 à n joueurs.
+
+La création d'un tournoi consiste à créer un évènement avec l'ensemble des joueurs de tous les clubs . Il est possible de créer des tournois en parallèle.
+
+Une fois le tournoi crée, il faut parcourir de nouveau le menu pour mettre à jour les rounds et scores: 2. Load tournament > 1.launch round.  > 1. Mettre à jour le score pour chaque Round.
+ 
