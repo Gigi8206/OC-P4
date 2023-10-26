@@ -11,12 +11,12 @@
 
 ## Introduction
 
-Le Gestionnaire de Tournoi d'Échecs est un logiciel Python permettant de gérer des tournois d'échecs selon le système de tournoi "suisse". Il a été développé dans le cadre d'un projet visant à aider un club d'échecs local à organiser ses tournois de manière plus efficace et conviviale. Le programme offre des fonctionnalités pour créer, gérer et sauvegarder des tournois, ajouter des joueurs, lancer des matchs, saisir les résultats et afficher le classement des joueurs.
+Le Gestionnaire de Tournoi d'Échecs est un logiciel Python permettant de gérer des tournois d'échecs. Il a été développé dans le cadre d'un projet visant à aider un club d'échecs local à organiser ses tournois de manière plus efficace et conviviale. Le programme offre des fonctionnalités pour créer, gérer et sauvegarder des tournois, ajouter des joueurs, lancer des matchs et saisir les résultats.
 
 ## Configuration requise
 
-* Python 3 installé sur votre système : [Téléchargement Python 3](https://www.python.org/downloads/)
-* Git installé sur votre système : [Téléchargement Git](https://git-scm.com/book/fr/v2/D%C3%A9marrage-rapide-Installation-de-Git)
+* Python 3 doit être installé sur votre système : [Téléchargement Python 3](https://www.python.org/downloads/)
+* Git doit être installé sur votre système : [Téléchargement Git](https://git-scm.com/book/fr/v2/D%C3%A9marrage-rapide-Installation-de-Git)
 
 ## Installation
 
