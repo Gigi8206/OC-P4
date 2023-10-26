@@ -55,6 +55,15 @@ Comment vérifier la syntaxe PEP8 du projet ?
 ```
 flake8 --format=html --htmldir=flake8_rapport --exclude env/
 ```
+Rendez-vous ensuite dans le dossier flake8_rapport :
+
+ $ cd flake8_rapport
+
+Puis exécutez le script html :
+
+ $ cat index.html
+
+Le terminal affichera le rapport, vous pouvez ouvrir votre fichier index.html directement depuis un navigateur
 Comment fonctionne l'application ?
 ```
 Elle est prévue en mode "terminal /console" par défaut.
