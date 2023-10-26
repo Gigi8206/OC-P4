@@ -1,4 +1,4 @@
-![Python Version](https://img.shields.io/badge/Python-3.7-blue.svg)![Flake8]
+![Python Version](https://img.shields.io/badge/Python-3.7-blue.svg)![Flake8](https://img.shields.io/badge/Flake8-Passing-brightgreen.svg)
 # Gestionnaire de Tournoi d'Échecs
 
 ## Table des matières
@@ -48,11 +48,15 @@ git clone https://github.com/Gigi8206/OC-P4.git)
 pip install -r requirements.txt
 ```
 Comment vérifier la syntaxe PEP8 du projet ?
-Create flake8-html report
-
-python -m flake8 --format=html --htmldir=flake8_rapport/
-
+  * Install flake8
+  * Install flake8-html
+  * 
+4. Create flake8-html report:
+```
+flake8 --format=html --htmldir=flake8_rapport --exclude env/
+```
 Comment fonctionne l'application ?
+```
 Elle est prévue en mode "terminal /console" par défaut.
 
 Initialement le projet sera vide. Au moins 1 club devra être crée pour enregistrer 1 à n joueurs.
