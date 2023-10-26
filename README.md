@@ -11,12 +11,12 @@
 
 ## Introduction
 
-Le Gestionnaire de Tournoi d'Échecs est un logiciel Python permettant de gérer des tournois d'échecs selon le système de tournoi "suisse". Il a été développé dans le cadre d'un projet visant à aider un club d'échecs local à organiser ses tournois de manière plus efficace et conviviale. Le programme offre des fonctionnalités pour créer, gérer et sauvegarder des tournois, ajouter des joueurs, lancer des matchs, saisir les résultats et afficher le classement des joueurs.
+Le Gestionnaire de Tournoi d'Échecs est un logiciel Python permettant de gérer des tournois d'échecs. Il a été développé dans le cadre d'un projet visant à aider un club d'échecs local à organiser ses tournois de manière plus efficace et conviviale. Le programme offre des fonctionnalités pour créer, gérer et sauvegarder des tournois, ajouter des joueurs, lancer des matchs et saisir les résultats.
 
 ## Configuration requise
 
-* Python 3 installé sur votre système : [Téléchargement Python 3](https://www.python.org/downloads/)
-* Git installé sur votre système : [Téléchargement Git](https://git-scm.com/book/fr/v2/D%C3%A9marrage-rapide-Installation-de-Git)
+* Python 3 doit être installé sur votre système : [Téléchargement Python 3](https://www.python.org/downloads/)
+* Git doit être installé sur votre système : [Téléchargement Git](https://git-scm.com/book/fr/v2/D%C3%A9marrage-rapide-Installation-de-Git)
 
 ## Installation
 
@@ -47,3 +47,30 @@ git clone https://github.com/Gigi8206/OC-P4.git)
 ```
 pip install -r requirements.txt
 ```
+Comment vérifier la syntaxe PEP8 du projet ?
+  * Install flake8
+  * Install flake8-html
+    
+4. Create flake8-html report:
+```
+flake8 --format=html --htmldir=flake8_rapport --exclude env/
+```
+Rendez-vous ensuite dans le dossier flake8_rapport :
+
+ $ cd flake8_rapport
+
+Puis exécutez le script html :
+
+ $ cat index.html
+
+Le terminal affichera le rapport, vous pouvez ouvrir votre fichier index.html directement depuis un navigateur
+Comment fonctionne l'application ?
+```
+Elle est prévue en mode "terminal /console" par défaut.
+
+Initialement le projet sera vide. Au moins 1 club devra être crée pour enregistrer 1 à n joueurs.
+
+La création d'un tournoi consiste à créer un évènement avec l'ensemble des joueurs de tous les clubs . Il est possible de créer des tournois en parallèle.
+
+Une fois le tournoi crée, il faut parcourir de nouveau le menu pour mettre à jour les rounds et scores: 2. Load tournament > 1.launch round.  > 1. Mettre à jour le score pour chaque Round.
+ 
