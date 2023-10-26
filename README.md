@@ -50,7 +50,7 @@ pip install -r requirements.txt
 Comment vérifier la syntaxe PEP8 du projet ?
   * Install flake8
   * Install flake8-html
-  * 
+    
 4. Create flake8-html report:
 ```
 flake8 --format=html --htmldir=flake8_rapport --exclude env/
