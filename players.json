@@ -2,64 +2,92 @@
     {
         "first_name": "Hadjer",
         "last_name": "Attatba",
-        "birthday": "1982-09-28T00:00:00",
+        "birthday": "1982-09-28",
         "identifier": "AB12345",
         "score": 0
     },
     {
         "first_name": "Aurelien",
         "last_name": "Lebray",
-        "birthday": "1996-03-30T00:00:00",
+        "birthday": "1996-03-30",
         "identifier": "AB00234",
         "score": 0
     },
     {
         "first_name": "Leyla",
         "last_name": "Beta",
-        "birthday": "1984-06-20T00:00:00",
+        "birthday": "1984-06-20",
         "identifier": "AB35699",
         "score": 0
     },
     {
         "first_name": "Romane",
         "last_name": "Jourde",
-        "birthday": "2000-09-06T00:00:00",
+        "birthday": "2000-09-06",
         "identifier": "CC12345",
         "score": 0
     },
     {
         "first_name": "Beryl",
         "last_name": "Steel",
-        "birthday": "1981-03-26T00:00:00",
+        "birthday": "1981-03-26",
         "identifier": "AA12345",
         "score": 0
     },
     {
         "first_name": "Amine",
         "last_name": "Benkara",
-        "birthday": "2015-03-06T00:00:00",
+        "birthday": "2015-03-06",
         "identifier": "DD12345",
         "score": 0
     },
     {
         "first_name": "Imene",
         "last_name": "Benkara",
-        "birthday": "2009-08-10T00:00:00",
+        "birthday": "2009-08-10",
         "identifier": "HH12345",
         "score": 0
     },
     {
         "first_name": "Romeo",
         "last_name": "Cortes",
-        "birthday": "2002-12-09T00:00:00",
+        "birthday": "2002-12-09",
         "identifier": "MM12345",
         "score": 0
     },
     {
         "first_name": "Sarah",
         "last_name": "Stone",
-        "birthday": "2001-04-12T00:00:00",
+        "birthday": "2001-04-12",
         "identifier": "KK12345",
+        "score": 0
+    },
+    {
+        "first_name": "Julie",
+        "last_name": "Dupont",
+        "birthday": "2005-05-10",
+        "identifier": "AA65999",
+        "score": 0
+    },
+    {
+        "first_name": "Yasmine",
+        "last_name": "Chably",
+        "birthday": "2000-03-12",
+        "identifier": null,
+        "score": 0
+    },
+    {
+        "first_name": "Piero",
+        "last_name": "Capello",
+        "birthday": "2000-02-10",
+        "identifier": "AB22222",
+        "score": 0
+    },
+    {
+        "first_name": "Alexandre",
+        "last_name": "Gazagnes",
+        "birthday": "1987-10-13T00:00:00",
+        "identifier": "AB23654",
         "score": 0
     }
 ]

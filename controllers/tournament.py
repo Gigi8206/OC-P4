@@ -4,6 +4,7 @@ from models.tournament import Tournament
 from models.tournament import TournamentManager
 from views.tournament import TournamentView as View
 from views.view_main import MainMenuView
+import json
 
 
 class TournamentController:
@@ -51,6 +52,7 @@ class TournamentController:
         # TODO: Continuer de charger le tournoi
         self.loop_round(tournament)
 
+
     def loop_round(self, tournament):
         while tournament.current_round < tournament.nb_rounds:
             result = self.view.input_ask_next_round(tournament.current_round)
@@ -60,9 +62,9 @@ class TournamentController:
             if result == "no":
                 return
 
-            for index, match in enumerate(
-                tournament.rounds[tournament.current_round].matches
-            ):
+            round_results = []  # Liste pour stocker les résultats de chaque match
+
+            for index, match in enumerate(tournament.rounds[tournament.current_round].matches):
                 print(
                     "Match {}: {} {} vs {} {}".format(
                         index,
@@ -101,6 +103,32 @@ class TournamentController:
                     match[1][0].score += 0.5
                     match[1][1] += 0.5
 
+                # Ajout des résultats de ce match à la liste round_results
+                round_results.append({
+                    "Match": f"{match[0][0].first_name} {match[0][0].last_name} vs {match[1][0].first_name} {match[1][0].last_name}",
+                    "Winner": winner
+                })
+
+            with open(f"Round_{tournament.current_round}_results.json", "w") as file:
+                json.dump(round_results, file)
+
+            self.manager.save_tournaments()
+            tournament.current_round += 1
+
+            # Marquer le tour comme terminé si c'est le dernier tour
+            if tournament.current_round == tournament.nb_rounds:
+                print("Fin du tournoi ! Bravo à tous les participants")
+                return
+
+            # Passer au tour suivant si tous les matchs sont finis
+            result = self.view.input_ask_next_round(tournament.current_round)
+            while result not in ("yes", "no"):
+                result = self.view.input_ask_next_round(tournament.current_round)
+
+            if result == "no":
+                return
+
+            tournament.get_next_round()
             self.manager.save_tournaments()
             tournament.get_next_round()
             tournament.current_round += 1
@@ -114,15 +142,22 @@ class TournamentController:
             raise ValueError("Error: Please add at least eight players first")
 
         players = []
-        for index in range(8):
-            players_available = [
-                player
-                for player in self.player_manager.players
-                if player not in players
-            ]
-            for index, player in enumerate(players_available):
-                print(f"{index}: {player}")
-            numero = self.view.choose_user(index)
+        players_available = self.player_manager.players.copy()  # Copie de la liste des joueurs disponibles
+
+        for _ in range(8):
+            available_indices = [i for i, player in enumerate(players_available) if player not in players]
+            for index in available_indices:
+                print(f"{index}: {players_available[index]}")
+
+            while True:
+                numero = self.view.choose_user(len(available_indices) - 1)
+                if numero in available_indices:
+                    break
+                else:
+                    print("Invalid player selection. Please choose a valid index.")
+
             player = players_available[numero]
             players.append(player)
+
         return players
+
